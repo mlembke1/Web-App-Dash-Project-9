@@ -8,7 +8,16 @@ header {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
-  /*display: flex;*/
+
+      @media (min-width: 768px){
+      display: flex;
+
+      }
+
+}
+
+#header-space {
+  flex-grow: 6;
 }
 
 #tm {
@@ -18,4 +27,31 @@ header {
 h3 {
   margin: 0;
   padding: 1em;
+
+    @media (min-width: $tablet-breakpoint) {
+      padding-top: 1.3em;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+      padding-top: 1.5em;
+    }
+}
+
+#avatar-name {
+      font-size: .5em;
+      letter-spacing: 4px;
+      display: block;
+      margin-bottom: 2em;
+      padding-bottom: 1em;
+
+          @media (min-width: 768px) {
+            margin-bottom: 0;
+            padding-top: 3em;
+            padding-left: 1em;
+            padding-right: 1em;
+          }
+
+          @media (min-width: 1024px) {
+            padding-top: 4em;
+          }
 }

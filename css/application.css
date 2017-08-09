@@ -373,14 +373,25 @@ template {
 body {
   background-color: #E0E4CC; }
 
-/***************chart-1************/
+/***************Line-chart************/
+@media (min-width: 768px) {
+  .line-chart-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center; } }
+
 /***************Header**************/
 header {
   background-color: #A7DBD8;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  letter-spacing: 5px;
-  /*display: flex;*/ }
+  letter-spacing: 5px; }
+  @media (min-width: 768px) {
+    header {
+      display: flex; } }
+
+#header-space {
+  flex-grow: 6; }
 
 #tm {
   font-weight: 100; }
@@ -388,6 +399,28 @@ header {
 h3 {
   margin: 0;
   padding: 1em; }
+  @media (min-width: 768px) {
+    h3 {
+      padding-top: 1.3em; } }
+  @media (min-width: 1024px) {
+    h3 {
+      padding-top: 1.5em; } }
+
+#avatar-name {
+  font-size: .5em;
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 2em;
+  padding-bottom: 1em; }
+  @media (min-width: 768px) {
+    #avatar-name {
+      margin-bottom: 0;
+      padding-top: 3em;
+      padding-left: 1em;
+      padding-right: 1em; } }
+  @media (min-width: 1024px) {
+    #avatar-name {
+      padding-top: 4em; } }
 
 /****************SVGs / IMAGES******************/
 #alert-bell {
@@ -399,13 +432,12 @@ h3 {
   border-radius: 50%;
   border: 3px solid #F38630;
   display: block;
-  margin: 1em  auto; }
-
-#avatar-name {
-  font-size: .5em;
-  letter-spacing: 4px;
-  display: inline-block;
-  margin-bottom: 2em; }
+  margin: 1em  auto;
+  width: 12%; }
+  @media (min-width: 768px) {
+    #avatar {
+      width: 4%;
+      margin-left: auto; } }
 
 /**************Navigation********/
 /*.main-nav {

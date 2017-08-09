@@ -1,5 +1,5 @@
 
-/****************SVGs / IMAGES******************/ 
+/****************SVGs / IMAGES******************/
 
 
 #alert-bell {
@@ -13,11 +13,16 @@
   border: 3px solid #F38630;
   display: block;
   margin: 1em  auto;
-}
+  width: 12%;
 
-#avatar-name {
-  font-size: .5em;
-  letter-spacing: 4px;
-  display: inline-block;
-  margin-bottom: 2em;
+  @media (min-width: $tablet-breakpoint){
+            width: 4%;
+            margin-left: auto;
+            
+        }
+
+    @media (min-width: $desktop-breakpoint){
+          // width: 50%;
+
+        }
 }

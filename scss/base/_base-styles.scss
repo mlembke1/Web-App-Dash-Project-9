@@ -5,18 +5,21 @@ body {
 }
 
 
-/***************chart-1************/
+/***************Line-chart************/
 
- #chart-1{
+ .line-chart-wrapper{
+
+
 
     @media (min-width: $tablet-breakpoint){
-          // height: 200px;
-          // margin-top: 75px;
+              width: 50%;
+              display: flex;
+              justify-content: center;
           }
 
       @media (min-width: $desktop-breakpoint){
-            // height: 275px;
-            // padding-top:0;
+            // width: 50%;
+
           }
 
   }
