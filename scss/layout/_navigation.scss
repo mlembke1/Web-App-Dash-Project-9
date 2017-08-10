@@ -3,15 +3,23 @@
 
 /**************Navigation********/
 
-/*.main-nav {
-  display: inline;
-}*/
-
 .main-nav ul {
   list-style: none;
   padding: 0 0 1em 0;
   text-align: center;
   border-bottom: 1px solid #F38630;
+
+    @media (min-width: $tablet-breakpoint) {
+      border-bottom: none;
+      width: 7%;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        width: 4%;
+    }
 }
 
 ul li {
@@ -21,17 +29,26 @@ ul li {
   margin: .12em;
   border: 1px solid #F38630;
   border-radius: 50%;
+    @media (min-width: $tablet-breakpoint) {
+        display: block;
+        width:auto;
+        margin-right: 0;
+        margin-left: 0;
+        border-radius: 5%;
+        border-left: none;
+    }
+
 }
 
-ul li.selected {
+ul li a {
+  display: block;
+  text-decoration: none;
+}
+
+ul li.active {
   background-color: #A7DBD8;
 }
 
-ul li:hover {
-  background-color: #69D2E7;
-}
-
-ul li:active {
-  background-color: #F38630;
-
+ul li:hover:not(.active) {
+  background-color: #A7DBD8;
 }

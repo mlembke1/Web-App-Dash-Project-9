@@ -2,6 +2,7 @@
 
 body {
   background-color: #E0E4CC;
+  margin: 0;
 }
 
 
@@ -12,9 +13,9 @@ body {
 
 
     @media (min-width: $tablet-breakpoint){
-              width: 50%;
-              display: flex;
-              justify-content: center;
+
+
+
           }
 
       @media (min-width: $desktop-breakpoint){
@@ -23,3 +24,10 @@ body {
           }
 
   }
+
+  main.main-content {
+
+      @media (min-width: $tablet-breakpoint) {
+          margin-left: 10%;
+      }
+    }
