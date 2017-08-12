@@ -9,8 +9,17 @@ header {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
 
+  z-index: 0;
+
       @media (min-width: 768px){
       display: flex;
+
+      margin-left: auto;
+      margin-bottom: 4em;
+
+      }
+
+      @media (min-width: 1024px) {
 
       }
 
@@ -24,7 +33,7 @@ header {
   font-weight: 100;
 }
 
-h3 {
+h3.primary-header {
   margin: 0;
   padding: 1em;
 
@@ -55,3 +64,42 @@ h3 {
             padding-top: 4em;
           }
 }
+
+
+      input[type=text] {
+          width: 130px;
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+          text-align: center;
+          background-color: rgba(167,219,216,.5);
+          margin: 1em 0;
+          font-family: 'Raleway', sans-serif;
+          letter-spacing: 3px;
+          border-style: none;
+          font-size: 1.1em;
+          // display: inline-block;
+
+          @media (min-width: $tablet-breakpoint) {
+                font-size: 1.2em;
+                float: right;
+                margin-top:  -1em;
+                text-align: left;
+                }
+            }
+
+            /* When the input field gets focus, change its width to 100% */
+            input[type=text]:focus {
+                width: 40%;
+                outline: none;
+            }
+
+      h3.secondary-header {
+
+          @media (min-width: $tablet-breakpoint) {
+            display: inline-block;
+            float: left;
+            margin-top: -1em;
+          }
+
+
+      }

@@ -6,13 +6,18 @@
       <title>Web App Dashboard</title>
 
       <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous">
+      </script>
       <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/application.css">
 
 
     </head>
         <header>
-            <h3>YourApp<span id ='tm'>&trade;</span></h3><span id=header-space></span>
+            <h3 class="primary-header">YourApp<span id ='tm'>&trade;</span></h3><span id=header-space></span>
             <img id="avatar" src="icons/avatar.jpg" alt="Photo of a man who is the user on this
             account" height= "12%" width= "12%">
             <span id="avatar-name"> PAUL BUNYAN</span>
@@ -56,9 +61,20 @@
       </nav>
 
       <main class="main-content">
-              <div class="line-chart-wrapper">
-                <canvas id="line-chart" height="300" width="300"></canvas>
-              </div>
+
+              <h3 class="secondary-header">Dashboard</h3>
+
+              <input id="search" type="text" name="search" placeholder="Search.." align="">
+
+
+              <section class="line-chart-wrapper">
+                <canvas id="line-chart" height="100" width="270"></canvas>
+              </section>
+
+              <section class="bar chart wrapper">
+                <canvas id="bar-chart" height="100" width="270"></canvas>
+              </section>
+
       </main>
 
     </body>

@@ -372,22 +372,38 @@ template {
 /************Body******************/
 body {
   background-color: #E0E4CC;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Raleway', sans-serif; }
 
 /***************Line-chart************/
 @media (min-width: 768px) {
-  main.main-content {
-    margin-left: 10%; } }
+  section.line-chart-wrapper {
+    height: 20%; } }
+
+main.main-content {
+  text-align: center; }
+  @media (min-width: 768px) {
+    main.main-content {
+      margin-left: 10%; } }
+
+canvas#line-chart {
+  margin-top: 2em; }
+  @media (min-width: 768px) {
+    canvas#line-chart {
+      margin-top: 0; } }
 
 /***************Header**************/
 header {
   background-color: #A7DBD8;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  letter-spacing: 5px; }
+  letter-spacing: 5px;
+  z-index: 0; }
   @media (min-width: 768px) {
     header {
-      display: flex; } }
+      display: flex;
+      margin-left: auto;
+      margin-bottom: 4em; } }
 
 #header-space {
   flex-grow: 6; }
@@ -395,14 +411,14 @@ header {
 #tm {
   font-weight: 100; }
 
-h3 {
+h3.primary-header {
   margin: 0;
   padding: 1em; }
   @media (min-width: 768px) {
-    h3 {
+    h3.primary-header {
       padding-top: 1.3em; } }
   @media (min-width: 1024px) {
-    h3 {
+    h3.primary-header {
       padding-top: 1.5em; } }
 
 #avatar-name {
@@ -420,6 +436,35 @@ h3 {
   @media (min-width: 1024px) {
     #avatar-name {
       padding-top: 4em; } }
+
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  text-align: center;
+  background-color: rgba(167, 219, 216, 0.5);
+  margin: 1em 0;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+  border-style: none;
+  font-size: 1.1em; }
+  @media (min-width: 768px) {
+    input[type=text] {
+      font-size: 1.2em;
+      float: right;
+      margin-top: -1em;
+      text-align: left; } }
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 40%;
+  outline: none; }
+
+@media (min-width: 768px) {
+  h3.secondary-header {
+    display: inline-block;
+    float: left;
+    margin-top: -1em; } }
 
 /****************SVGs / IMAGES******************/
 #alert-bell {
@@ -450,7 +495,9 @@ h3 {
       width: 7%;
       position: fixed;
       height: 100%;
-      overflow: auto; } }
+      overflow: auto;
+      margin-top: 0;
+      padding: .5em .5em .5em 0; } }
   @media (min-width: 1024px) {
     .main-nav ul {
       width: 4%; } }

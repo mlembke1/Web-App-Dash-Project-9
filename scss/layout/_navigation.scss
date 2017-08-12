@@ -15,11 +15,19 @@
       position: fixed;
       height: 100%;
       overflow: auto;
+      margin-top: 0;
+      padding: .5em .5em .5em 0;
+      // background-color: rgba(243,134,48,.4);
+      // top: 69px;
+      
     }
 
     @media (min-width: $desktop-breakpoint) {
         width: 4%;
+
     }
+
+
 }
 
 ul li {

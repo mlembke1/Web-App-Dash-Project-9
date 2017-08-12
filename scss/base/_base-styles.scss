@@ -3,31 +3,37 @@
 body {
   background-color: #E0E4CC;
   margin: 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 
 /***************Line-chart************/
 
- .line-chart-wrapper{
-
-
-
+ section.line-chart-wrapper {
     @media (min-width: $tablet-breakpoint){
-
-
-
+                height: 20%;
           }
 
       @media (min-width: $desktop-breakpoint){
-            // width: 50%;
-
           }
-
   }
 
   main.main-content {
 
+          text-align: center;
+
+
       @media (min-width: $tablet-breakpoint) {
           margin-left: 10%;
+      }
+    }
+
+
+    canvas#line-chart {
+
+      margin-top: 2em;
+
+      @media (min-width: 768px) {
+            margin-top:0;
       }
     }
