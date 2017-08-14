@@ -7,7 +7,7 @@
   list-style: none;
   padding: 0 0 1em 0;
   text-align: center;
-  border-bottom: 1px solid #F38630;
+  border-bottom: 1px solid $light-orange;
 
     @media (min-width: $tablet-breakpoint) {
       border-bottom: none;
@@ -17,9 +17,8 @@
       overflow: auto;
       margin-top: 0;
       padding: .5em .5em .5em 0;
-      // background-color: rgba(243,134,48,.4);
-      // top: 69px;
-      
+
+
     }
 
     @media (min-width: $desktop-breakpoint) {
@@ -30,12 +29,12 @@
 
 }
 
-ul li {
+.main-nav ul li {
   display: inline-block;
   width: 5%;
   padding: 1em;
   margin: .12em;
-  border: 1px solid #F38630;
+  border: 1px solid $light-orange;
   border-radius: 50%;
     @media (min-width: $tablet-breakpoint) {
         display: block;
@@ -48,15 +47,36 @@ ul li {
 
 }
 
-ul li a {
+.main-nav ul li a {
   display: block;
   text-decoration: none;
 }
 
-ul li.active {
-  background-color: #A7DBD8;
+.main-nav ul li.active {
+  background-color: $light-blue;
 }
 
-ul li:hover:not(.active) {
-  background-color: #A7DBD8;
+.main-nav ul li:hover:not(.active) {
+  background-color: $light-blue;
+}
+
+.line-chart-nav ul {
+  list-style: none;
+  text-align: center;
+  padding:0;
+
+}
+
+.line-chart-nav ul li {
+  display: inline-block;
+  padding: .5em;
+  border: 1px solid $light-orange;
+  border-radius: 5%;
+}
+
+.line-chart-nav ul li:hover {
+  background-color: $light-orange-transparent;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
 }

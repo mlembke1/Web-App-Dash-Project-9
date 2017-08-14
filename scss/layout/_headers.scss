@@ -4,14 +4,14 @@
 
 
 header {
-  background-color: #A7DBD8;
+  background-color: $light-blue;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-Rale;
   letter-spacing: 5px;
 
   z-index: 0;
 
-      @media (min-width: 768px){
+      @media (min-width: $tablet-breakpoint){
       display: flex;
 
       margin-left: auto;
@@ -19,7 +19,7 @@ header {
 
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: $desktop-breakpoint) {
 
       }
 
@@ -53,14 +53,14 @@ h3.primary-header {
       margin-bottom: 2em;
       padding-bottom: 1em;
 
-          @media (min-width: 768px) {
+          @media (min-width: $tablet-breakpoint) {
             margin-bottom: 0;
             padding-top: 3em;
             padding-left: 1em;
             padding-right: 1em;
           }
 
-          @media (min-width: 1024px) {
+          @media (min-width: $desktop-breakpoint) {
             padding-top: 4em;
           }
 }
@@ -71,9 +71,9 @@ h3.primary-header {
           -webkit-transition: width 0.4s ease-in-out;
           transition: width 0.4s ease-in-out;
           text-align: center;
-          background-color: rgba(167,219,216,.5);
+          background-color: $light-blue-transparent;
           margin: 1em 0;
-          font-family: 'Raleway', sans-serif;
+          font-family: $font-Rale;
           letter-spacing: 3px;
           border-style: none;
           font-size: 1.1em;
@@ -94,6 +94,9 @@ h3.primary-header {
             }
 
       h3.secondary-header {
+
+        display: none;
+        float: left;
 
           @media (min-width: $tablet-breakpoint) {
             display: inline-block;

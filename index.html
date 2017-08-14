@@ -66,14 +66,27 @@
 
               <input id="search" type="text" name="search" placeholder="Search.." align="">
 
+              <nav class="line-chart-nav">
+                <ul>
+                  <li id="nav-daily">Daily</li>
+                  <li id="nav-weekly">Weekly</li>
+                  <li id="nav-monthly">Monthly</li>
+                </ul>
+              </nav>
 
-              <section class="line-chart-wrapper">
-                <canvas id="line-chart" height="100" width="270"></canvas>
+
+              <section class="daily-line-chart-wrapper">
+                <canvas id="daily-line-chart" height="100" width="270"></canvas>
               </section>
 
-              <section class="bar chart wrapper">
-                <canvas id="bar-chart" height="100" width="270"></canvas>
+              <section class="weekly-line-chart-wrapper">
+                <canvas id="weekly-line-chart" height="100" width="270"></canvas>
               </section>
+
+              <section class="monthly-line-chart-wrapper">
+                <canvas id="monthly-line-chart" height="100" width="270"></canvas>
+              </section>
+
 
       </main>
 
