@@ -41,8 +41,11 @@
         width:auto;
         margin-right: 0;
         margin-left: 0;
-        border-radius: 5%;
+        border-radius: 0%;
+        border-right: 1px solid $light-orange;
         border-left: none;
+        border-top: none;
+        border-bottom: none;
     }
 
 }
@@ -56,8 +59,10 @@
   background-color: $light-blue;
 }
 
-.main-nav ul li:hover:not(.active) {
+.main-nav ul li:hover {
   background-color: $light-blue;
+  transform: scale(1.1);
+  transition: .25s;
 }
 
 .line-chart-nav ul {
@@ -76,7 +81,8 @@
 
 .line-chart-nav ul li:hover {
   background-color: $light-orange-transparent;
-  color: white;
+  color: grey;
   transition: .5s;
   cursor: pointer;
+  transform: scale(1.1);
 }

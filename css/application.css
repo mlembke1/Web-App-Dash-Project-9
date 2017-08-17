@@ -375,22 +375,43 @@ body {
   margin: 0;
   font-family: "Raleway", sans-serif; }
 
-/***************Line-chart************/
-@media (min-width: 768px) {
-  section.line-chart-wrapper {
-    height: 20%; } }
-
 main.main-content {
   text-align: center; }
   @media (min-width: 768px) {
     main.main-content {
       margin-left: 10%; } }
 
-canvas#line-chart {
-  margin-top: 2em; }
+/***************Line-chart************/
+section.entire-line-chart-wrapper {
+  margin-top: 3em; }
+
+@media (min-width: 768px) {
+  section.daily-line-chart-wrapper {
+    height: 20%;
+    border-bottom: 2px solid #69d2e7; } }
+
+/***************Bar-doughtnut -wrapper************/
+section.bar-doughnut-wrapper {
+  width: 100%; }
+
+/***************Bar-chart************/
+section.bar-chart-wrapper {
+  margin-top: 4em; }
   @media (min-width: 768px) {
-    canvas#line-chart {
-      margin-top: 0; } }
+    section.bar-chart-wrapper {
+      width: 50%;
+      border-right: 2px solid #69d2e7;
+      float: left;
+      margin-right: -2em;
+      padding-right: 1em; } }
+
+/***************Doughnut -  chart************/
+section.doughnut-chart-wrapper {
+  margin-top: 4em; }
+  @media (min-width: 768px) {
+    section.doughnut-chart-wrapper {
+      width: 50%;
+      float: right; } }
 
 /***************Header**************/
 header {
@@ -518,8 +539,11 @@ h3.secondary-header {
       width: auto;
       margin-right: 0;
       margin-left: 0;
-      border-radius: 5%;
-      border-left: none; } }
+      border-radius: 0%;
+      border-right: 1px solid #f38630;
+      border-left: none;
+      border-top: none;
+      border-bottom: none; } }
 
 .main-nav ul li a {
   display: block;
@@ -528,8 +552,10 @@ h3.secondary-header {
 .main-nav ul li.active {
   background-color: #a7dbd8; }
 
-.main-nav ul li:hover:not(.active) {
-  background-color: #a7dbd8; }
+.main-nav ul li:hover {
+  background-color: #a7dbd8;
+  transform: scale(1.1);
+  transition: .25s; }
 
 .line-chart-nav ul {
   list-style: none;
@@ -544,8 +570,9 @@ h3.secondary-header {
 
 .line-chart-nav ul li:hover {
   background-color: rgba(243, 134, 48, 0.5);
-  color: white;
+  color: grey;
   transition: .5s;
-  cursor: pointer; }
+  cursor: pointer;
+  transform: scale(1.1); }
 
 /*# sourceMappingURL=application.css.map */

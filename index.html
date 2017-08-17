@@ -16,49 +16,53 @@
 
 
     </head>
-        <header>
-            <h3 class="primary-header">YourApp<span id ='tm'>&trade;</span></h3><span id=header-space></span>
-            <img id="avatar" src="icons/avatar.jpg" alt="Photo of a man who is the user on this
-            account" height= "12%" width= "12%">
-            <span id="avatar-name"> PAUL BUNYAN</span>
-        </header>
 
-        <nav class="main-nav">
-              <ul>
+            <header>
+                    <h3 class="primary-header">YourApp<span id ='tm'>&trade;</span>
+                    </h3><span id=header-space></span>
 
-                          <li class="active">
-                              <a href="#">
-                                  <img src="icons/icon-dashboard.svg" alt="dashboard icon">
-                              </a>
-                          </li>
+                    <img id="avatar" src="icons/avatar.jpg" alt="Photo of a man
+                    who is the user on this account" height= "12%" width= "12%">
 
-                          <li>
-                              <a href="#">
-                                  <img src="icons/icon-members.svg" alt="members icon">
-                               </a>
-                          </li>
+                    <span id="avatar-name"> PAUL BUNYAN</span>
+            </header>
+
+            <nav class="main-nav">
+                  <ul>
+
+                              <li class="active">
+                                  <a href="#">
+                                      <img src="icons/icon-dashboard.svg" alt="dashboard icon">
+                                  </a>
+                              </li>
+
+                              <li>
+                                  <a href="#">
+                                      <img src="icons/icon-members.svg" alt="members icon">
+                                   </a>
+                              </li>
 
 
-                          <li>
-                              <a href="#">
-                                    <img src="icons/icon-visits.svg" alt="visits icon">
-                              </a>
-                          </li>
+                              <li>
+                                  <a href="#">
+                                        <img src="icons/icon-visits.svg" alt="visits icon">
+                                  </a>
+                              </li>
 
-                           <li>
-                              <a href="#">
-                                  <img src="icons/icon-settings.svg" alt="settings icon">
-                              </a>
-                          </li>
+                               <li>
+                                  <a href="#">
+                                      <img src="icons/icon-settings.svg" alt="settings icon">
+                                  </a>
+                              </li>
 
-                           <li>
-                              <a href="#">
-                                    <img src="icons/icon-bell.svg" alt="alert bell icon">
-                              </a>
-                          </li>
-
-              </ul>
-      </nav>
+                               <li>
+                                  <a href="#">
+                                        <img src="icons/icon-bell.svg" alt="alert bell icon">
+                                  </a>
+                              </li>
+                      </ul>
+              </nav>
+    </head>
 
       <main class="main-content">
 
@@ -74,19 +78,29 @@
                 </ul>
               </nav>
 
+              <section class="entire-line-chart-wrapper">
+                      <section class="daily-line-chart-wrapper">
+                        <canvas id="daily-line-chart" height="100" width="270"></canvas>
+                      </section>
 
-              <section class="daily-line-chart-wrapper">
-                <canvas id="daily-line-chart" height="100" width="270"></canvas>
+                      <section class="weekly-line-chart-wrapper">
+                        <canvas id="weekly-line-chart" height="100" width="270"></canvas>
+                      </section>
+
+                      <section class="monthly-line-chart-wrapper">
+                        <canvas id="monthly-line-chart" height="100" width="270"></canvas>
+                      </section>
+            </section>
+
+              <section class="bar-doughnut-wrapper">
+                        <section class="bar-chart-wrapper">
+                          <canvas id="bar-chart" height="100" width="270"></canvas>
+                        </section>
+
+                        <section class="doughnut-chart-wrapper">
+                          <canvas id="doughnut-chart" height="100" width="270"></canvas>
+                        </section>
               </section>
-
-              <section class="weekly-line-chart-wrapper">
-                <canvas id="weekly-line-chart" height="100" width="270"></canvas>
-              </section>
-
-              <section class="monthly-line-chart-wrapper">
-                <canvas id="monthly-line-chart" height="100" width="270"></canvas>
-              </section>
-
 
       </main>
 

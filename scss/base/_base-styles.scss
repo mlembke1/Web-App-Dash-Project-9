@@ -6,34 +6,75 @@ body {
   font-family: $font-Rale;
 }
 
+main.main-content {
+        text-align: center;
+        @media (min-width: $tablet-breakpoint) {
+            margin-left: 10%;
+          }
+  }
+
+
 
 /***************Line-chart************/
 
- section.line-chart-wrapper {
+section.entire-line-chart-wrapper {
+  margin-top: 3em;
+}
+
+ section.daily-line-chart-wrapper {
     @media (min-width: $tablet-breakpoint){
                 height: 20%;
+                border-bottom: 2px solid $bright-blue;
+
           }
 
       @media (min-width: $desktop-breakpoint){
           }
   }
 
-  main.main-content {
-
-          text-align: center;
 
 
-      @media (min-width: $tablet-breakpoint) {
-          margin-left: 10%;
-      }
-    }
+/***************Bar-doughtnut -wrapper************/
+
+  section.bar-doughnut-wrapper{
+      width: 100%;
+        @media(min-width: $tablet-breakpoint) {
+
+        }
+  }
+
+    /***************Bar-chart************/
 
 
-    canvas#line-chart {
+    section.bar-chart-wrapper {
 
-      margin-top: 2em;
+      margin-top: 4em;
+       @media (min-width: $tablet-breakpoint){
+                   width: 50%;
+                   border-right: 2px solid $bright-blue;
+                   float: left;
+                   margin-right: -2em;
+                   padding-right: 1em;
+             }
 
-      @media (min-width: 768px) {
-            margin-top:0;
-      }
-    }
+         @media (min-width: $desktop-breakpoint){
+             }
+     }
+
+
+     /***************Doughnut -  chart************/
+
+
+         section.doughnut-chart-wrapper {
+
+           margin-top: 4em;
+            @media (min-width: $tablet-breakpoint){
+                        width: 50%;
+                        float: right;
+
+
+                  }
+
+              @media (min-width: $desktop-breakpoint){
+                  }
+          }

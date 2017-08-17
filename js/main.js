@@ -9,6 +9,13 @@ swal({
 });
 
 
+// *********************************CHARTS! WOO HOO!***************************************
+
+
+// *********************************LINE CHART! ***************************************
+
+
+
 const days =   ["Sunday", "Monday", "Tuesday", "Wednesday",
                         "Thursday", "Friday", "Saturday"];
 
@@ -18,7 +25,7 @@ const months = ["January", "February", "March", "April", "May", "June", "July"];
 
 
 
-// *************************************** Daily Chart ******************************************
+// *************************************** Daily Line Chart ******************************************
 
 
 var ctx= document.getElementById("daily-line-chart");
@@ -30,14 +37,14 @@ var lineChart = new Chart(ctx, {
         labels:  days,
         datasets: [
           {
-            label: 'Daily',
+            label: 'Days',
             lineTension: 0.2,
             data: [12, 19, 3, 5, 2, 3, 11],
             backgroundColor: 'rgba(153,103,55, .5)',
             borderColor: 'rgba(243,134,48,1)' ,
             borderWidth: 1,
-            pointBackgroundColor: 'rgb(105,210,231)',
-            pointBorderColor: 'rgb(105,210,231)',
+            pointBackgroundColor: 'rgba(250,105, 0, .5)',
+            pointBorderColor: 'rgba(250,105, 0, .5)',
             pointRadius: 2,
             pointHoverBackgroundColor: 'rgb(224,228,204)',
             pointHoverRadius: 10
@@ -56,7 +63,7 @@ var lineChart = new Chart(ctx, {
 });
 
 
-// *************************************** Weekly Chart ******************************************
+// *************************************** Weekly  Line Chart ******************************************
 
 var ctx= document.getElementById("weekly-line-chart");
 
@@ -67,7 +74,7 @@ var lineChart = new Chart(ctx, {
         labels:  weeks,
         datasets: [
         {
-            label: 'Weekly',
+            label: 'Weeks',
             lineTension: 0.2,
             data: [133, 84, 21, 46, 25, 56, 140],
             backgroundColor: 'rgba(250,105, 0, .5)',
@@ -93,7 +100,7 @@ var lineChart = new Chart(ctx, {
 });
 
 
-// *************************************** Monthly Chart ******************************************
+// *************************************** Monthly  Line Chart ******************************************
 
 var ctx= document.getElementById("monthly-line-chart");
 
@@ -104,7 +111,7 @@ var lineChart = new Chart(ctx, {
         labels:  months,
         datasets: [
         {
-            label: 'Monthly',
+            label: 'Months',
             lineTension: 0.2,
             data: [333, 204, 51, 146, 100, 166, 360],
             backgroundColor: 'rgba(167,219,216, .5)',
@@ -130,7 +137,7 @@ var lineChart = new Chart(ctx, {
 });
 
 
-// Here we are just making the line chart nav interactive
+// Here we are just making the line chart navigation interactive
 
 // Daily button
 $('#nav-daily').click(function() {
@@ -170,5 +177,72 @@ $('#nav-monthly').click(function() {
 $('#weekly-line-chart').hide();
 $('#monthly-line-chart').hide();
 
-//  Setting the daily button in the line chart nav as the selected button by default 
+//  Setting the daily button in the line chart nav as the selected button by default
 $('#nav-daily').css('background-color', 'rgba(243,134,48,.5)');
+$('.line-chart-nav ul li:hover').css('background-color', 'rgba(243,134,48,.5)');
+
+
+
+
+
+
+// ************************************BAR CHART!*********************************
+
+
+var ctx= document.getElementById("bar-chart");
+
+
+var lineChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels:  days,
+        datasets: [
+          {
+            label: 'Daily Traffic',
+            data: [12, 19, 3, 5, 2, 3, 11],
+            backgroundColor: 'rgba(250,105, 0, .5)',
+            borderColor: 'rgba(167,219,216, 1)' ,
+            borderWidth: 1,
+          }
+      ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+
+// ************************************DOUGHNUT - CHART!*********************************
+
+
+var ctx= document.getElementById("doughnut-chart");
+
+
+var lineChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels:  ['Phones', 'Tablets', 'Desktop'],
+        datasets: [
+          {
+            label: 'Users',
+            data: [33.33, 33.33, 33.33],
+            backgroundColor: ['rgba(250,105, 0, .5)', 'rgb(167,219,216)', 'rgb(105,210,231)'],
+            borderColor: 'rgba(167,219,216, 1)' ,
+            borderWidth: 1,
+          }
+      ]
+    },
+    options: {
+      cutoutPercentage: 70,
+      animation: {
+        animateScale: true
+      },
+    }
+});
