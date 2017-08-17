@@ -384,11 +384,13 @@ main.main-content {
 /***************Line-chart************/
 section.entire-line-chart-wrapper {
   margin-top: 3em; }
+  @media (min-width: 768px) {
+    section.entire-line-chart-wrapper {
+      border-bottom: 2px solid #69d2e7; } }
 
 @media (min-width: 768px) {
   section.daily-line-chart-wrapper {
-    height: 20%;
-    border-bottom: 2px solid #69d2e7; } }
+    height: 20%; } }
 
 /***************Bar-doughtnut -wrapper************/
 section.bar-doughnut-wrapper {
@@ -396,14 +398,15 @@ section.bar-doughnut-wrapper {
 
 /***************Bar-chart************/
 section.bar-chart-wrapper {
-  margin-top: 4em; }
+  margin-top: 1em; }
   @media (min-width: 768px) {
     section.bar-chart-wrapper {
       width: 50%;
       border-right: 2px solid #69d2e7;
       float: left;
       margin-right: -2em;
-      padding-right: 1em; } }
+      padding-right: 1em;
+      margin-top: 6em; } }
 
 /***************Doughnut -  chart************/
 section.doughnut-chart-wrapper {
@@ -411,7 +414,8 @@ section.doughnut-chart-wrapper {
   @media (min-width: 768px) {
     section.doughnut-chart-wrapper {
       width: 50%;
-      float: right; } }
+      float: right;
+      margin-top: 6em; } }
 
 /***************Header**************/
 header {

@@ -72,6 +72,7 @@
 
               <nav class="line-chart-nav">
                 <ul>
+                  <li id="nav-hourly">Hourly</li>
                   <li id="nav-daily">Daily</li>
                   <li id="nav-weekly">Weekly</li>
                   <li id="nav-monthly">Monthly</li>
@@ -79,6 +80,11 @@
               </nav>
 
               <section class="entire-line-chart-wrapper">
+
+                      <section class="hourly-line-chart-wrapper">
+                        <canvas id="hourly-line-chart" height="100" width="270"></canvas>
+                      </section>
+
                       <section class="daily-line-chart-wrapper">
                         <canvas id="daily-line-chart" height="100" width="270"></canvas>
                       </section>
@@ -93,6 +99,7 @@
             </section>
 
               <section class="bar-doughnut-wrapper">
+                    <h4>Daily Traffic</h4>
                         <section class="bar-chart-wrapper">
                           <canvas id="bar-chart" height="100" width="270"></canvas>
                         </section>

@@ -19,12 +19,15 @@ main.main-content {
 
 section.entire-line-chart-wrapper {
   margin-top: 3em;
+      @media (min-width: $tablet-breakpoint){
+            border-bottom: 2px solid $bright-blue;
+          }
 }
 
  section.daily-line-chart-wrapper {
     @media (min-width: $tablet-breakpoint){
                 height: 20%;
-                border-bottom: 2px solid $bright-blue;
+
 
           }
 
@@ -48,16 +51,14 @@ section.entire-line-chart-wrapper {
 
     section.bar-chart-wrapper {
 
-      margin-top: 4em;
+      margin-top: 1em;
        @media (min-width: $tablet-breakpoint){
                    width: 50%;
                    border-right: 2px solid $bright-blue;
                    float: left;
                    margin-right: -2em;
                    padding-right: 1em;
-             }
-
-         @media (min-width: $desktop-breakpoint){
+                   margin-top: 6em;
              }
      }
 
@@ -71,10 +72,6 @@ section.entire-line-chart-wrapper {
             @media (min-width: $tablet-breakpoint){
                         width: 50%;
                         float: right;
-
-
-                  }
-
-              @media (min-width: $desktop-breakpoint){
+                        margin-top: 6em;
                   }
           }
