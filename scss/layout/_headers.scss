@@ -15,7 +15,7 @@ header {
       display: flex;
 
       margin-left: auto;
-      margin-bottom: 4em;
+      margin-bottom: 1em;
 
       }
 
@@ -103,6 +103,41 @@ h3.primary-header {
             float: left;
             margin-top: -1em;
           }
-
-
       }
+
+
+  //*****************************************ALERT*******************************************
+
+
+  span.alert  p {
+      width: 80%;
+      margin: auto;
+      background-color: $light-orange-transparent;
+      color: grey;
+      border-radius: 3px;
+      padding: .5em;
+      letter-spacing: 1px;
+      border: 2px solid $bright-orange;
+
+      @media (min-width: $tablet-breakpoint) {
+          width: 90%;
+          margin-bottom: 3em;
+      }
+  }
+
+  span#close {
+    background-color: $bright-orange;
+    border-color: $tan;
+    color: $tan;
+    border-radius: 5px;
+    padding: .52em;
+    margin: .75em;
+    font-size: .75em;
+  }
+
+  span#close:hover {
+    background-color: $light-blue;
+    transition: .5s;
+    cursor: pointer;
+    color: grey;
+  }

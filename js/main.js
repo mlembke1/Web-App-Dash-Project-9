@@ -1,13 +1,11 @@
-
-// Here we have the plugin to make our alert look a little more appealing
-
-swal({
-  title: "Welcome!",
-  text: "Let's see how much traffic YourApp has!",
-  type: "info",
-  confirmButtonText: "Explore!",
+// *********************************ALERT! ***************************************
+$('span#close').click(function(){
+  $('span.alert').css({
+    'display': 'none',
+    'transition': '2s'
+  });
+  $('header').css('margin-bottom', '3em');
 });
-
 
 // *********************************CHARTS! WOO HOO!***************************************
 
@@ -181,6 +179,9 @@ var lineChart = new Chart(ctx, {
 
 // Here we are just making the line chart navigation interactive
 
+let navButton = $('#line-chart-nav').length;
+console.log(navButton);
+
 // Hourly button
 $('#nav-hourly').click(function() {
   $('#hourly-line-chart').show();
@@ -228,7 +229,7 @@ $('#nav-monthly').click(function() {
   $('#nav-monthly').css('background-color', 'rgba(243,134,48,.5)');
   $('#nav-daily').css('background-color', 'rgb(224,228,204)');
   $('#nav-weekly').css('background-color', 'rgb(224,228,204)');
-  $('#nav-hourly').css('background-color', 'rgb(224,228,204)'); 
+  $('#nav-hourly').css('background-color', 'rgb(224,228,204)');
 });
 
 // Here we set what will be visible(concerning the first line chart)

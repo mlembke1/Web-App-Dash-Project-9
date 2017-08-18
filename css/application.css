@@ -428,7 +428,7 @@ header {
     header {
       display: flex;
       margin-left: auto;
-      margin-bottom: 4em; } }
+      margin-bottom: 1em; } }
 
 #header-space {
   flex-grow: 6; }
@@ -493,6 +493,35 @@ h3.secondary-header {
       display: inline-block;
       float: left;
       margin-top: -1em; } }
+
+span.alert p {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(243, 134, 48, 0.5);
+  color: grey;
+  border-radius: 3px;
+  padding: .5em;
+  letter-spacing: 1px;
+  border: 2px solid #fa6900; }
+  @media (min-width: 768px) {
+    span.alert p {
+      width: 90%;
+      margin-bottom: 3em; } }
+
+span#close {
+  background-color: #fa6900;
+  border-color: #e0e4cc;
+  color: #e0e4cc;
+  border-radius: 5px;
+  padding: .52em;
+  margin: .75em;
+  font-size: .75em; }
+
+span#close:hover {
+  background-color: #a7dbd8;
+  transition: .5s;
+  cursor: pointer;
+  color: grey; }
 
 /****************SVGs / IMAGES******************/
 #alert-bell {
