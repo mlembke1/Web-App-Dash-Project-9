@@ -1,9 +1,10 @@
 // *********************************ALERT! ***************************************
 $('span#close').click(function(){
-  $('span.alert').css({
-    'display': 'none',
-    'transition': '2s'
-  });
+  $('span.alert').hide('slow');
+  // $('span.alert').css({
+  //   'display': 'none',
+  //   'transition': '2s'
+  // });
   $('header').css('margin-bottom', '3em');
 });
 
