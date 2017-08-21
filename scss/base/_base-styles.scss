@@ -20,21 +20,15 @@ main.main-content {
 section.entire-line-chart-wrapper {
   margin-top: 3em;
       @media (min-width: $tablet-breakpoint){
-            border-bottom: 2px solid $bright-blue;
+
           }
 }
 
- section.daily-line-chart-wrapper {
+ div.daily-line-chart-wrapper {
     @media (min-width: $tablet-breakpoint){
                 height: 20%;
-
-
-          }
-
-      @media (min-width: $desktop-breakpoint){
-          }
-  }
-
+              }
+}
 
 
 /***************Bar-doughtnut -wrapper************/
@@ -49,16 +43,18 @@ section.entire-line-chart-wrapper {
     /***************Bar-chart************/
 
 
-    section.bar-chart-wrapper {
-
-      margin-top: 1em;
+    div.bar-chart-wrapper {
+      margin-top: 2em;
+      text-align: center;
        @media (min-width: $tablet-breakpoint){
                    width: 50%;
-                   border-right: 2px solid $bright-blue;
+                   border-top: 1px solid $bright-blue;
+                   border-right: 1px solid $bright-blue;
+                   border-bottom: 1px solid $bright-blue;
                    float: left;
                    margin-right: -2em;
-                   padding-right: 1em;
-                   margin-top: 6em;
+                   margin-top: 4em;
+
              }
      }
 
@@ -66,12 +62,16 @@ section.entire-line-chart-wrapper {
      /***************Doughnut -  chart************/
 
 
-         section.doughnut-chart-wrapper {
-
-           margin-top: 4em;
+         div.doughnut-chart-wrapper {
+           margin-top: 2em;
+           text-align: center;
             @media (min-width: $tablet-breakpoint){
                         width: 50%;
                         float: right;
-                        margin-top: 6em;
+                        margin-top: 4em;
+                        border-top: 1px solid $bright-blue;
+                        border-bottom: 1px solid $bright-blue;
+                        padding-right: .92em;
                   }
           }
+      

@@ -18,11 +18,19 @@
   @media (min-width: $tablet-breakpoint){
             width: 4%;
             margin-left: auto;
-            
+
         }
 
     @media (min-width: $desktop-breakpoint){
           // width: 50%;
 
         }
+}
+
+img.social-icon  {
+    width: 10%;
+    
+  @media (min-width: $tablet-breakpoint){
+
+  }
 }

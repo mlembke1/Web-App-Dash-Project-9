@@ -1,6 +1,6 @@
 // *********************************ALERT! ***************************************
 $('span#close').click(function(){
-  $('span.alert').hide('slow');
+  $('span.alert').slideUp('slow');
   // $('span.alert').css({
   //   'display': 'none',
   //   'transition': '2s'
@@ -304,7 +304,8 @@ var lineChart = new Chart(ctx, {
     },
     options: {
       legend: {
-        display: true
+        display: true,
+        position: 'right'
       },
       cutoutPercentage: 70,
       animation: {

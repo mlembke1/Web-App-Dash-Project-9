@@ -16,13 +16,7 @@ header {
 
       margin-left: auto;
       margin-bottom: 1em;
-
       }
-
-      @media (min-width: $desktop-breakpoint) {
-
-      }
-
 }
 
 #header-space {
@@ -133,6 +127,8 @@ h3.primary-header {
     padding: .52em;
     margin: .75em;
     font-size: .75em;
+    display: inline-block;
+    font-weight: 900;
   }
 
   span#close:hover {
@@ -141,3 +137,11 @@ h3.primary-header {
     cursor: pointer;
     color: grey;
   }
+
+
+.social-stats h4 {
+  @media (min-width: $tablet-breakpoint) {
+    text-align: left;
+    // margin-top: 2em;
+  }
+}

@@ -4,55 +4,41 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width">
       <title>Web App Dashboard</title>
-      <script
-        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-        crossorigin="anonymous">
-      </script>
       <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/application.css">
-
-
     </head>
+    <body>
 
             <header>
-                    <h3 class="primary-header">YourApp<span id ='tm'>&trade;</span>
-                    </h3><span id=header-space></span>
-
+                    <h3 class="primary-header">YourApp<span id ='tm'>&trade;</span></h3>
+                    <span id=header-space></span>
                     <img id="avatar" src="icons/avatar.jpg" alt="Photo of a man
                     who is the user on this account" height= "12%" width= "12%">
-
                     <span id="avatar-name"> PAUL BUNYAN</span>
             </header>
 
             <nav class="main-nav">
                   <ul>
-
                               <li class="active">
                                   <a href="#">
                                       <img src="icons/icon-dashboard.svg" alt="dashboard icon">
                                   </a>
                               </li>
-
                               <li>
                                   <a href="#">
                                       <img src="icons/icon-members.svg" alt="members icon">
                                    </a>
                               </li>
-
-
                               <li>
                                   <a href="#">
                                         <img src="icons/icon-visits.svg" alt="visits icon">
                                   </a>
                               </li>
-
                                <li>
                                   <a href="#">
                                       <img src="icons/icon-settings.svg" alt="settings icon">
                                   </a>
                               </li>
-
                                <li>
                                   <a href="#">
                                         <img src="icons/icon-bell.svg" alt="alert bell icon">
@@ -60,13 +46,12 @@
                               </li>
                       </ul>
               </nav>
-    </head>
 
       <main class="main-content">
 
               <span class='alert'>
-                  <p> <b><em>Information Alert!</em></b> You have entered Japan's most powerful imaginery app.
-                     Tread carfully.
+                  <p> <b><em>Information Alert!</em></b>
+                    You have entered Japan's most powerful imaginery app. Tread carfully.
                      <span id="close"> X </span>
                    </p>
               </span>
@@ -85,38 +70,55 @@
               </nav>
 
               <section class="entire-line-chart-wrapper">
+                      <div class="hourly-line-chart-wrapper">
+                          <canvas id="hourly-line-chart" height="100" width="270"></canvas>
+                      </div>
 
-                      <section class="hourly-line-chart-wrapper">
-                        <canvas id="hourly-line-chart" height="100" width="270"></canvas>
-                      </section>
+                      <div class="daily-line-chart-wrapper">
+                          <canvas id="daily-line-chart" height="100" width="270"></canvas>
+                      </div>
 
-                      <section class="daily-line-chart-wrapper">
-                        <canvas id="daily-line-chart" height="100" width="270"></canvas>
-                      </section>
+                      <div class="weekly-line-chart-wrapper">
+                          <canvas id="weekly-line-chart" height="100" width="270"></canvas>
+                      </div>
 
-                      <section class="weekly-line-chart-wrapper">
-                        <canvas id="weekly-line-chart" height="100" width="270"></canvas>
-                      </section>
-
-                      <section class="monthly-line-chart-wrapper">
-                        <canvas id="monthly-line-chart" height="100" width="270"></canvas>
-                      </section>
+                      <div class="monthly-line-chart-wrapper">
+                          <canvas id="monthly-line-chart" height="100" width="270"></canvas>
+                      </div>
             </section>
 
               <section class="bar-doughnut-wrapper">
-                    <h4>Daily Traffic</h4>
-                        <section class="bar-chart-wrapper">
+                        <div class="bar-chart-wrapper">
+                          <h4>Daily Traffic</h4>
                           <canvas id="bar-chart" height="100" width="270"></canvas>
-                        </section>
-
-                        <section class="doughnut-chart-wrapper">
+                        </div>
+                        <div class="doughnut-chart-wrapper">
+                          <h4>Users</h4>
                           <canvas id="doughnut-chart" height="100" width="270"></canvas>
-                        </section>
+                        </div>
               </section>
 
-      </main>
-
+              <section class="social-stats">
+                    <h4>Social Stats</h4>
+                        <div class = "twitter-icon">
+                            <img class="social-icon" src="icons/icon-twitter.svg" alt="Twitter Icon">
+                        </div>
+                        <div class = "facebook-icon">
+                            <img class="social-icon" src="icons/icon-facebook.svg"
+                              alt="Facebook Icon">
+                        </div>
+                        <div class = "google-plus-icon" >
+                            <img class="social-icon" src="icons/icon-google-plus.svg"
+                              alt="Google-Plus Icon">
+                        </div>
+              </section>
+          </main>
+          <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+            <script src="js/main.js"></script>
     </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
-    <script src="js/main.js"></script>
 </html>
