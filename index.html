@@ -8,15 +8,15 @@
       <link rel="stylesheet" type="text/css" href="css/application.css">
     </head>
     <body>
-
+<!--------------------- LARGE HEADER AT THE TOP OF THE SCREEN ---------------------->
             <header>
                     <h3 class="primary-header">YourApp<span id ='tm'>&trade;</span></h3>
                     <span id=header-space></span>
                     <img id="avatar" src="icons/avatar.jpg" alt="Photo of a man
                     who is the user on this account" height= "12%" width= "12%">
                     <span id="avatar-name"> PAUL BUNYAN</span>
-            </header>
-
+            </header
+<!-------------------------- MAIN NAVIGATION / SIDE NAVIGATION ------------------------------>
             <nav class="main-nav">
                   <ul>
                               <li class="active">
@@ -46,20 +46,19 @@
                               </li>
                       </ul>
               </nav>
-
+<!------------------------------------BEGINNING OF MAIN CONTENT------------------------------->
       <main class="main-content">
-
+              <!----------- ALERT BAR ----------->
               <span class='alert'>
                   <p> <b><em>Information Alert!</em></b>
                     You have entered Japan's most powerful imaginery app. Tread carfully.
                      <span id="close"> X </span>
                    </p>
               </span>
-
               <h3 class="secondary-header">Dashboard</h3>
-
-              <input id="search" type="text" name="search" placeholder="Search.." align="">
-
+              <!------------SEARCH BAR------------>
+              <input class="top-search" type="text" name="search" placeholder="Search.." align="">
+              <!------------LINE CHART NAVIGATION------------>
               <nav class="line-chart-nav">
                 <ul id="line-chart-nav">
                   <li id="nav-hourly">Hourly</li>
@@ -68,49 +67,164 @@
                   <li id="nav-monthly">Monthly</li>
                 </ul>
               </nav>
-
+              <!------------LINE CHARTS------------>
               <section class="entire-line-chart-wrapper">
-                      <div class="hourly-line-chart-wrapper">
+                      <div class="hourly-line-chart-wrapper" >
                           <canvas id="hourly-line-chart" height="100" width="270"></canvas>
                       </div>
 
-                      <div class="daily-line-chart-wrapper">
+                      <div class="daily-line-chart-wrapper" >
                           <canvas id="daily-line-chart" height="100" width="270"></canvas>
                       </div>
 
                       <div class="weekly-line-chart-wrapper">
-                          <canvas id="weekly-line-chart" height="100" width="270"></canvas>
+                          <canvas id="weekly-line-chart" height="100" width="270" ></canvas>
                       </div>
 
-                      <div class="monthly-line-chart-wrapper">
+                      <div class="monthly-line-chart-wrapper" >
                           <canvas id="monthly-line-chart" height="100" width="270"></canvas>
                       </div>
             </section>
-
+            <!------------BAR CHART AND DOUGHNUT CHART------------>
               <section class="bar-doughnut-wrapper">
-                        <div class="bar-chart-wrapper">
+                        <div class="bar-chart-wrapper"  >
                           <h4>Daily Traffic</h4>
                           <canvas id="bar-chart" height="100" width="270"></canvas>
                         </div>
-                        <div class="doughnut-chart-wrapper">
+                        <div class="doughnut-chart-wrapper" >
                           <h4>Users</h4>
                           <canvas id="doughnut-chart" height="100" width="270"></canvas>
                         </div>
               </section>
-
+              <!------------SOCIAL MEDIA SECTION------------>
               <section class="social-stats">
                     <h4>Social Stats</h4>
                         <div class = "twitter-icon">
                             <img class="social-icon" src="icons/icon-twitter.svg" alt="Twitter Icon">
+                            <p>Twitter</p>
+                            <p class="social-stats-numbers">1,328</p>
                         </div>
                         <div class = "facebook-icon">
                             <img class="social-icon" src="icons/icon-facebook.svg"
                               alt="Facebook Icon">
+                              <p>Facebook</p>
+                              <p class="social-stats-numbers">967</p>
                         </div>
                         <div class = "google-plus-icon" >
-                            <img class="social-icon" src="icons/icon-google-plus.svg"
-                              alt="Google-Plus Icon">
+                            <img class="social-icon"src="icons/icon-google-plus.svg"
+                            alt="Google-Plus Icon">
+                              <p>Google Plus</p>
+                              <p class="social-stats-numbers">248</p>
                         </div>
+              </section>
+              <!------------NEW MEMBERS SECTION------------>
+              <section class="new-members-wrapper">
+                <h3 class="new-members-header">New Members</h3>
+                  <ul>
+                    <li>
+                           <img class="new-member-avatar"
+                          src="icons/oliver-code.jpg" alt="Photo of Oliver Code">
+                          <p class="new-member-name"> Oliver Code
+                          <br>
+                        <a class="email" href="#">oliver@example.com</a></p>
+                        <p class="new-member-date">06/12/17</p>
+                    </li>
+                    <li>
+                        <img class="new-member-avatar"
+                        src="icons/janis-debugger.jpg" alt="Photo of Janis Debugger">
+                        <p class="new-member-name">Janis Debugger
+                        <br>
+                        <a class="email" href="#">janis@example.com</a></p>
+                        <p class="new-member-date">07/14/17</p>
+                    </li>
+                    <li>
+                        <img class="new-member-avatar"
+                        src="icons/oleander-brogrammer.jpg"
+                        alt="Photo of Oleander Brogrammer">
+                        <p class="new-member-name">Oleander Brogrammer
+                        <br>
+                        <a class="email" href="#">oleander@example.com</a></p>
+                        <p class="new-member-date">07/19/17</p>
+                    </li>
+                    <li>
+                        <img class="new-member-avatar"
+                        src="icons/kloey-troubleshute.jpg" alt="Photo of Kloey Troubleshute">
+                        <p class="new-member-name">Kloey Troubleshute
+                        <br>
+                        <a class="email" href="#">kloey@example.com</a></p>
+                        <p class="new-member-date">08/12/17</p>
+                    </li>
+                  </ul>
+              </section>
+              <!------------RECENT ACTIVITY SECTION------------>
+              <section class="recent-activity-wrapper">
+                <h3 class="recent-activity-header">Recent Activity</h3>
+                <ul>
+                  <li>
+                      <img class="new-member-avatar"
+                        src="icons/oliver-code.jpg" alt="Photo of Oliver Code">
+                      <p class="recent-activity-details">Oliver Code shared YourApp with
+                         five friends.
+                      <h6>2 hours ago</h6>
+                      </p>
+                      <a>
+                          <img class="down-arrow" src="icons/down-arrow.svg" alt="down
+                          arrow icon">
+                      </a>
+                  </li>
+                  <li>
+                      <img class="new-member-avatar"
+                      src="icons/janis-debugger.jpg" alt="Photo of Janis Debugger">
+                      <p class="recent-activity-details">Janis Debugger commented on
+                        your article.
+                      <h6>8 hours ago</h6>
+                      </p>
+                      <a>
+                        <img class="down-arrow" src="icons/down-arrow.svg" alt="down arrow
+                        icon">
+                      </a>
+                  </li>
+                  <li>
+                      <img class="new-member-avatar"
+                      src="icons/oleander-brogrammer.jpg"
+                      alt="Photo of Oleander Brogrammer">
+                      <p class="recent-activity-details">Oleander Brogrammer created a new
+                        feature for YourApp.
+                      <h6>3 days ago</h6>
+                      </p>
+                      <a>
+                        <img class="down-arrow" src="icons/down-arrow.svg" alt="down arrow
+                         icon">
+                      </a>
+                  </li>
+                  <li>
+                      <img class="new-member-avatar"
+                      src="icons/kloey-troubleshute.jpg" alt="Photo of Kloey Troubleshute">
+                      <p class="recent-activity-details">Kloey Troubleshute shared YourApp with
+                        three friends.
+                      <h6>About a week ago</h6>
+                      </p>
+                      <a>
+                        <img class="down-arrow" src="icons/down-arrow.svg" alt="down arrow
+                        icon">
+                      </a>
+                  </li>
+                </ul>
+              </section>
+              <!------------MESSAGE USER SECTION------------>
+              <section class= "message-user-wrapper">
+                  <h3 class="message-user-header">Message User</h3>
+                  <input class="user-search" type="text" name="user-search" value=""
+                  placeholder="Search for User">
+                  <br>
+                  <textarea class="user-message" placeholder="Message for User"
+                  name="user-message" rows="8" cols="45">
+                  </textarea>
+              </section>
+              <!------------SETTINGS SECTION------------>
+              <section class="settings-wrapper">
+                  <h3 class="settings-header">Settings</h3>
+
               </section>
           </main>
           <script
@@ -122,3 +236,12 @@
             <script src="js/main.js"></script>
     </body>
 </html>
+
+
+<!-- Giving credit here to the creator of the down arrow svg icon I used. -->
+
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/lucy-g"
+  title="Lucy G">Lucy G</a> from <a href="https://www.flaticon.com/"
+  title="Flaticon">www.flaticon.com</a> is licensed by
+  <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative
+   Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->

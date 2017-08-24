@@ -1,44 +1,33 @@
-
-
-
-/**************Navigation********/
+/****************************MAIN NAVIGATION ( SIDE - NAV ) *************************/
 
 .main-nav ul {
-  list-style: none;
-  padding: 0 0 1em 0;
-  text-align: center;
-  border-bottom: 1px solid $light-orange;
-
+    list-style: none;
+    padding: 0 0 1em 0;
+    text-align: center;
+    border-bottom: 1px solid $light-orange;
     @media (min-width: $tablet-breakpoint) {
-      border-bottom: none;
-      width: 7%;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-      margin-top: 0;
-      padding: .5em .5em .5em 0;
-
-
+        border-bottom: none;
+        width: 7%;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        margin-top: 0;
+        padding: .5em .5em .5em 0;
     }
-
     @media (min-width: $desktop-breakpoint) {
         width: 4%;
-
     }
-
-
 }
-
 .main-nav ul li {
-  display: inline-block;
-  width: 5%;
-  padding: 1em;
-  margin: .12em;
-  border: 1px solid $light-orange;
-  border-radius: 50%;
+    display: inline-block;
+    width: 5%;
+    padding: 1em;
+    margin: .12em;
+    border: 1px solid $light-orange;
+    border-radius: 50%;
     @media (min-width: $tablet-breakpoint) {
         display: block;
-        width:auto;
+        width: auto;
         margin-right: 0;
         margin-left: 0;
         border-radius: 0%;
@@ -47,42 +36,37 @@
         border-top: none;
         border-bottom: none;
     }
-
 }
-
 .main-nav ul li a {
-  display: block;
-  text-decoration: none;
+    display: block;
+    text-decoration: none;
 }
-
 .main-nav ul li.active {
-  background-color: $light-blue;
+    background-color: $light-blue;
+}
+.main-nav ul li:hover {
+    background-color: $light-blue;
+    transform: scale(1.1);
+    transition: .25s;
 }
 
-.main-nav ul li:hover {
-  background-color: $light-blue;
-  transform: scale(1.1);
-  transition: .25s;
-}
+/****************************LINE CHART NAVIGATION*************************/
 
 .line-chart-nav ul {
-  list-style: none;
-  text-align: center;
-  padding:0;
-
+    list-style: none;
+    text-align: center;
+    padding: 0;
 }
-
 .line-chart-nav ul li {
-  display: inline-block;
-  padding: .5em;
-  border: 1px solid $light-orange;
-  border-radius: 5%;
+    display: inline-block;
+    padding: .5em;
+    border: 1px solid $light-orange;
+    border-radius: 5%;
 }
-
 .line-chart-nav ul li:hover {
-  background-color: $light-orange-transparent;
-  color: grey;
-  transition: .5s;
-  cursor: pointer;
-  transform: scale(1.1);
+    background-color: $light-orange-transparent;
+    color: grey;
+    transition: .5s;
+    cursor: pointer;
+    transform: scale(1.1);
 }

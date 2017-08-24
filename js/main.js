@@ -180,8 +180,26 @@ var lineChart = new Chart(ctx, {
 
 // Here we are just making the line chart navigation interactive
 
-let navButton = $('#line-chart-nav').length;
-console.log(navButton);
+// let navButton = document.getElementById('line-chart-nav');
+// let lineCharts = document.getElementById('entire-line-chart-wrapper');
+//
+// for (let i = 0; i < navButton.children.length; i++) {
+//    navButton.children[i].click(function (e) {
+//      if (e) {
+//        lineCharts.children[i].show();
+//      }
+//      else {
+//         lineCharts.children.hide();
+//      }
+//    } );
+// }
+//
+// console.log(lineCharts.children);
+//
+// window.onload = function (initialDisplay) {
+//   lineCharts.children[0].show();
+//   navButton.children[0].css('background-color', 'rgba(243,134,48,.5)');
+// };
 
 // Hourly button
 $('#nav-hourly').click(function() {

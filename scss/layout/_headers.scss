@@ -1,106 +1,86 @@
-
 /***************Header**************/
 
-
-
 header {
-  background-color: $light-blue;
-  text-align: center;
-  font-family: $font-Rale;
-  letter-spacing: 5px;
-
-  z-index: 0;
-
-      @media (min-width: $tablet-breakpoint){
-      display: flex;
-
-      margin-left: auto;
-      margin-bottom: 1em;
-      }
-}
-
-#header-space {
-  flex-grow: 6;
-}
-
-#tm {
-  font-weight: 100;
-}
-
-h3.primary-header {
-  margin: 0;
-  padding: 1em;
-
+    background-color: $light-blue;
+    text-align: center;
+    font-family: $font-Rale;
+    letter-spacing: 5px;
+    z-index: 0;
     @media (min-width: $tablet-breakpoint) {
-      padding-top: 1.3em;
+        display: flex;
+        margin-left: auto;
+        margin-bottom: 1em;
     }
-
+}
+#header-space {
+    flex-grow: 6;
+}
+#tm {
+    font-weight: 100;
+}
+h3.primary-header {
+    margin: 0;
+    padding: 1em;
+    @media (min-width: $tablet-breakpoint) {
+        padding-top: 1.3em;
+    }
     @media (min-width: $desktop-breakpoint) {
-      padding-top: 1.5em;
+        padding-top: 1.5em;
+    }
+}
+#avatar-name {
+    font-size: .5em;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    @media (min-width: $tablet-breakpoint) {
+        margin-bottom: 0;
+        padding-top: 3em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    @media (min-width: $desktop-breakpoint) {
+        padding-top: 4em;
+    }
+}
+input.top-search[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    text-align: center;
+    background-color: $light-blue-transparent;
+    margin: 1em 0;
+    font-family: $font-Rale;
+    letter-spacing: 3px;
+    border-style: none;
+    font-size: 1.1em;
+    // display: inline-block;
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 1.2em;
+        float: right;
+        margin-top: -1em;
+        text-align: left;
     }
 }
 
-#avatar-name {
-      font-size: .5em;
-      letter-spacing: 4px;
-      display: block;
-      margin-bottom: 2em;
-      padding-bottom: 1em;
+/* When the input field gets focus, change its width to 100% */
 
-          @media (min-width: $tablet-breakpoint) {
-            margin-bottom: 0;
-            padding-top: 3em;
-            padding-left: 1em;
-            padding-right: 1em;
-          }
-
-          @media (min-width: $desktop-breakpoint) {
-            padding-top: 4em;
-          }
+input[type=text]:focus {
+    width: 40%;
+    outline: none;
+}
+h3.secondary-header {
+    display: none;
+    float: left;
+    @media (min-width: $tablet-breakpoint) {
+        display: inline-block;
+        float: left;
+        margin-top: -1em;
+    }
 }
 
-
-      input[type=text] {
-          width: 130px;
-          -webkit-transition: width 0.4s ease-in-out;
-          transition: width 0.4s ease-in-out;
-          text-align: center;
-          background-color: $light-blue-transparent;
-          margin: 1em 0;
-          font-family: $font-Rale;
-          letter-spacing: 3px;
-          border-style: none;
-          font-size: 1.1em;
-          // display: inline-block;
-
-          @media (min-width: $tablet-breakpoint) {
-                font-size: 1.2em;
-                float: right;
-                margin-top:  -1em;
-                text-align: left;
-                }
-            }
-
-            /* When the input field gets focus, change its width to 100% */
-            input[type=text]:focus {
-                width: 40%;
-                outline: none;
-            }
-
-      h3.secondary-header {
-
-        display: none;
-        float: left;
-
-          @media (min-width: $tablet-breakpoint) {
-            display: inline-block;
-            float: left;
-            margin-top: -1em;
-          }
-      }
-
-
-  //*****************************************ALERT*******************************************
+// *****************************************ALERT- BAR*******************************************
 
 
   span.alert  p {
@@ -139,9 +119,27 @@ h3.primary-header {
   }
 
 
+// ********************************SOCIAL STATS HEADER*************************************
+
+
 .social-stats h4 {
+    margin-top: 4em;
   @media (min-width: $tablet-breakpoint) {
     text-align: left;
-    // margin-top: 2em;
+    margin-top: 21em;
   }
+  @media(min-width: $desktop-breakpoint) {
+    margin-top: 26em;
+  }
+}
+
+
+
+// **********************NEW MEMEBERS /RECENT-ACTIVITY HEADER*******************
+
+
+.new-members-header, .recent-activity-header{
+  margin-top: 5em;
+  margin-bottom: 2em;
+
 }

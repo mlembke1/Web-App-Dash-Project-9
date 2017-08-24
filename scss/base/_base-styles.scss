@@ -1,77 +1,171 @@
 /************Body******************/
 
 body {
-  background-color: $tan;
-  margin: 0;
-  font-family: $font-Rale;
+    background-color: $tan;
+    margin: 0;
+    font-family: $font-Rale;
 }
-
 main.main-content {
-        text-align: center;
-        @media (min-width: $tablet-breakpoint) {
-            margin-left: 10%;
-          }
-  }
-
-
+    text-align: center;
+    @media (min-width: $tablet-breakpoint) {
+        margin-left: 10%;
+    }
+}
 
 /***************Line-chart************/
 
 section.entire-line-chart-wrapper {
-  margin-top: 3em;
-      @media (min-width: $tablet-breakpoint){
-
-          }
+    margin-top: 3em;
+    @media (min-width: $tablet-breakpoint) {}
 }
-
- div.daily-line-chart-wrapper {
-    @media (min-width: $tablet-breakpoint){
-                height: 20%;
-              }
+div.daily-line-chart-wrapper {
+    @media (min-width: $tablet-breakpoint) {
+        height: 20%;
+    }
 }
-
 
 /***************Bar-doughtnut -wrapper************/
 
-  section.bar-doughnut-wrapper{
-      width: 100%;
-        @media(min-width: $tablet-breakpoint) {
+section.bar-doughnut-wrapper {
+    width: 100%;
+    @media(min-width: $tablet-breakpoint) {}
+}
 
-        }
+/***************Bar-chart************/
+
+div.bar-chart-wrapper {
+    margin-top: 2em;
+    text-align: center;
+    @media (min-width: $tablet-breakpoint) {
+        width: 50%;
+        border-top: 1px solid $bright-blue;
+        border-right: 1px solid $bright-blue;
+        border-bottom: 1px solid $bright-blue;
+        float: left;
+        margin-right: -2em;
+        margin-top: 4em;
+    }
+}
+
+/***************Doughnut -  chart************/
+
+div.doughnut-chart-wrapper {
+    margin-top: 2em;
+    text-align: center;
+    @media (min-width: $tablet-breakpoint) {
+        width: 50%;
+        float: right;
+        margin-top: 4em;
+        border-top: 1px solid $bright-blue;
+        border-bottom: 1px solid $bright-blue;
+        padding-right: .92em;
+    }
+}
+
+/*************** Social Icon Section ************/
+
+.social-stats {
+    @media (min-width: $tablet-breakpoint) {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-evenly;
+    }
+}
+div.twitter-icon, div.facebook-icon, div.google-plus-icon {
+    border: 1px solid $bright-blue;
+    width: 80%;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 5px;
+    @media (min-width: $tablet-breakpoint) {
+        width: 25%;
+        display: inline-block;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+}
+
+/************************ NEW MEMBERS/RECENT ACTIVITY SECTION********************/
+
+.new-members-wrapper {
+    @media (min-width: $tablet-breakpoint) {
+        float: left;
+        width: 50%;
+    }
+}
+.recent-activity-wrapper {
+    @media (min-width: $tablet-breakpoint) {
+        float: right;
+        width: 50%;
+    }
+}
+.new-members-wrapper ul, .recent-activity-wrapper ul {
+    list-style: none;
+    padding-left: 0;
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid $bright-blue;
+    }
+}
+.new-members-wrapper li, .recent-activity-wrapper li {
+    border-bottom: 1px solid $bright-blue;
+    border-radius: 5px;
+    margin: 1em;
+    @media (min-width: $tablet-breakpoint) {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+    }
+}
+.new-members-wrapper ul li p.new-member-name {
+      .email {
+          text-decoration: none;
+          line-height: 2em;
+      }
+      @media (min-width: $tablet-breakpoint) {
+          margin-left: -8em;
+          font-size: 1.25em;
+              .email {
+                  font-size: .75em;
+              }
+              .email:hover {
+                  cursor: pointer;
+                  background-color: $light-blue-transparent;
+                  transition-duration: .5s;
+                  color: black;
+                  border: 1px solid $light-orange;
+                  padding: .25em;
+                  border-radius: 5px;
+              }
+      }
+      @media (min-width: $desktop-breakpoint) {
+        margin-left: -15em;
+      }
+      @media (min-width: 1200px) {
+        margin-left: -25em;
+      }
   }
 
-    /***************Bar-chart************/
 
+  .recent-activity-wrapper h6 {
+      margin-bottom: 0;
+      @media (min-width: $tablet-breakpoint) {
+      margin-top: 1em;
+    }
+  }
 
-    div.bar-chart-wrapper {
-      margin-top: 2em;
-      text-align: center;
-       @media (min-width: $tablet-breakpoint){
-                   width: 50%;
-                   border-top: 1px solid $bright-blue;
-                   border-right: 1px solid $bright-blue;
-                   border-bottom: 1px solid $bright-blue;
-                   float: left;
-                   margin-right: -2em;
-                   margin-top: 4em;
+.recent-activity-details {
+  @media (min-width: $tablet-breakpoint) {
+    font-size: 1em;
+    width: 1000px;
+  }
+}
 
-             }
-     }
-
-
-     /***************Doughnut -  chart************/
-
-
-         div.doughnut-chart-wrapper {
-           margin-top: 2em;
-           text-align: center;
-            @media (min-width: $tablet-breakpoint){
-                        width: 50%;
-                        float: right;
-                        margin-top: 4em;
-                        border-top: 1px solid $bright-blue;
-                        border-bottom: 1px solid $bright-blue;
-                        padding-right: .92em;
-                  }
-          }
-      
+/************************ MESSAGE USER / SETTINGS SECTION**************************/
+.message-user-wrapper input, textarea {
+  display: inline-block;
+  margin: 1em;
+}

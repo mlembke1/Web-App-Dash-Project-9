@@ -1,36 +1,57 @@
-
 /****************SVGs / IMAGES******************/
 
-
 #alert-bell {
-  padding-bottom: 2%;
-  display: block;
-  margin: 1em auto;
+    padding-bottom: 2%;
+    display: block;
+    margin: 1em auto;
 }
-
 #avatar {
-  border-radius: 50%;
-  border: 3px solid #F38630;
-  display: block;
-  margin: 1em  auto;
-  width: 12%;
-
-  @media (min-width: $tablet-breakpoint){
-            width: 4%;
-            margin-left: auto;
-
-        }
-
-    @media (min-width: $desktop-breakpoint){
-          // width: 50%;
-
-        }
+    border-radius: 50%;
+    border: 3px solid #F38630;
+    display: block;
+    margin: 1em auto;
+    width: 12%;
+    @media (min-width: $tablet-breakpoint) {
+        width: 4%;
+        margin-left: auto;
+    }
+    @media (min-width: $desktop-breakpoint) {
+        // width: 50%;
+    }
 }
-
-img.social-icon  {
+img.social-icon {
     width: 10%;
-    
-  @media (min-width: $tablet-breakpoint){
-
-  }
+    padding: 1em;
+    border: 1px solid $light-orange;
+    border-radius: 5px;
+    margin-top: .5em;
+    background-color: $light-orange-transparent;
+    @media (min-width: $tablet-breakpoint) {}
+}
+.new-member-avatar {
+    width: 12%;
+    height: 12%;
+    border: 1px solid $light-blue;
+    border-radius: 50%;
+    margin-bottom: -.5em;
+    @media (min-width: $tablet-breakpoint) {
+      height: 65%;
+    }
+    @media (min-width: $desktop-breakpoint) {
+      height: 85%;
+      width: 9%;
+    }
+}
+.down-arrow {
+    width: 7%;
+    @media (min-width: $tablet-breakpoint) {
+      width: 15%;
+      float: right;
+      padding-right: 1em;
+    }
+}
+.down-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: .5s;
 }
