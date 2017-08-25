@@ -1,4 +1,4 @@
-/***************Header**************/
+/*************************************MAIN- HEADER**********************************************/
 
 header {
     background-color: $light-blue;
@@ -55,7 +55,6 @@ input.top-search[type=text] {
     letter-spacing: 3px;
     border-style: none;
     font-size: 1.1em;
-    // display: inline-block;
     @media (min-width: $tablet-breakpoint) {
         font-size: 1.2em;
         float: right;

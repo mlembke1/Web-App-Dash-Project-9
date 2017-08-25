@@ -1,17 +1,13 @@
-// *********************************ALERT! ***************************************
+// *********************************************ALERT! **********************************************
 $('span#close').click(function(){
   $('span.alert').slideUp('slow');
-  // $('span.alert').css({
-  //   'display': 'none',
-  //   'transition': '2s'
-  // });
   $('header').css('margin-bottom', '3em');
 });
 
-// *********************************CHARTS! WOO HOO!***************************************
+// *********************************CHARTS! WOO HOO!******************************************
 
 
-// *********************************LINE CHART! ***************************************
+// *********************************LINE CHART! ***************************************************
 
 const hours = ['6 a.m.', '8 a.m.', '10 a.m.', '12 p.m.', '2 p.m.', '4 p.m.', '6 p.m.'];
 
@@ -25,7 +21,7 @@ const months = ["January", "February", "March", "April", "May", "June", "July"];
 
 
 
-// *************************************** Hourly Line Chart ******************************************
+//****************************************HOURLY-LINE-CHART***********************************
 
 Chart.defaults.global.legend.display = false;
 
@@ -66,7 +62,7 @@ var lineChart = new Chart(ctx, {
 
 
 
-// *************************************** Daily Line Chart ******************************************
+// *************************************** DAILY LINE CHART*************************************
 
 
 var ctx= document.getElementById("daily-line-chart");
@@ -104,7 +100,7 @@ var lineChart = new Chart(ctx, {
 });
 
 
-// *************************************** Weekly  Line Chart ******************************************
+// *************************************** WEEKLY LINE CHART**********************************
 
 var ctx= document.getElementById("weekly-line-chart");
 
@@ -141,7 +137,7 @@ var lineChart = new Chart(ctx, {
 });
 
 
-// *************************************** Monthly  Line Chart ******************************************
+// *************************************** MONTHYL LINE CHART********************************
 
 var ctx= document.getElementById("monthly-line-chart");
 
@@ -201,7 +197,7 @@ var lineChart = new Chart(ctx, {
 //   navButton.children[0].css('background-color', 'rgba(243,134,48,.5)');
 // };
 
-// Hourly button
+//****************************************HOURLY BUTTON****************************************
 $('#nav-hourly').click(function() {
   $('#hourly-line-chart').show();
   $('#weekly-line-chart').hide();
@@ -213,7 +209,7 @@ $('#nav-hourly').click(function() {
   $('#nav-monthly').css('background-color', 'rgb(224,228,204)');
 });
 
-// Daily button
+//****************************************DAILY BUTTON*******************************************
 $('#nav-daily').click(function() {
   $('#daily-line-chart').show();
   $('#weekly-line-chart').hide();
@@ -226,7 +222,7 @@ $('#nav-daily').click(function() {
 });
 
 
-// Weekly button
+//****************************************WEEKLY BUTTON****************************************
 $('#nav-weekly').click(function() {
   $('#weekly-line-chart').show();
   $('#daily-line-chart').hide();
@@ -239,7 +235,7 @@ $('#nav-weekly').click(function() {
 });
 
 
-// Monthly Button
+//****************************************MONHTLY BUTTON**************************************
 $('#nav-monthly').click(function() {
   $('#monthly-line-chart').show();
   $('#weekly-line-chart').hide();
@@ -267,7 +263,7 @@ $('.line-chart-nav ul li:hover').css('background-color', 'rgba(243,134,48,.5)');
 
 
 
-// ************************************BAR CHART!*********************************
+//****************************************BAR CHART***********************************************
 
 
 var ctx= document.getElementById("bar-chart");
@@ -300,7 +296,7 @@ var lineChart = new Chart(ctx, {
 
 
 
-// ************************************DOUGHNUT - CHART!*********************************
+//**********************************DOUGHNUT CHART*******************************************
 
 
 var ctx= document.getElementById("doughnut-chart");
