@@ -509,12 +509,13 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
 @media (min-width: 768px) {
   .message-user-wrapper {
     float: left;
-    height: 350px; } }
+    height: 350px;
+    text-align: left; } }
 
 @media (min-width: 768px) {
   .settings-wrapper {
-    float: right;
-    height: 350px; } }
+    height: 350px;
+    text-align: left; } }
 
 .message-user-wrapper input[type=text], textarea {
   margin: 1em;
@@ -523,14 +524,11 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   font-family: "Raleway", sans-serif;
   letter-spacing: 3px;
   border-style: none;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  width: 90%; }
   @media (min-width: 768px) {
     .message-user-wrapper input[type=text], textarea {
-      font-size: 1.2em; }
-      .message-user-wrapper input[type=text] .user-search, textarea .user-search {
-        width: 250px;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out; } }
+      font-size: 1.2em; } }
 
 textarea {
   margin: auto;
@@ -657,6 +655,14 @@ span#close:hover {
 .new-members-header, .recent-activity-header {
   margin-top: 5em;
   margin-bottom: 2em; }
+
+.message-user-header {
+  padding-left: 1em;
+  text-align: left; }
+
+.settings-header {
+  padding-left: 1em;
+  text-align: left; }
 
 /****************************************SVGs / IMAGES******************************************/
 #alert-bell {

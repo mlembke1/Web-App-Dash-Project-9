@@ -175,14 +175,15 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   @media (min-width: $tablet-breakpoint){
       float: left;
       height: 350px;
+      text-align: left;
 
   }
 }
 
 .settings-wrapper {
   @media (min-width: $tablet-breakpoint) {
-      float: right;
       height: 350px;
+      text-align: left;
   }
 }
 
@@ -194,14 +195,10 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
       letter-spacing: 3px;
       border-style: none;
       font-size: 1.1em;
+      width: 90%;
 
       @media (min-width: $tablet-breakpoint) {
           font-size: 1.2em;
-            .user-search{
-            width: 250px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-          }
       }
 }
 
