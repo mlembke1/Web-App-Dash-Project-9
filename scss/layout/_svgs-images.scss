@@ -48,10 +48,11 @@ img.social-icon {
       width: 15%;
       float: right;
       padding-right: 1em;
+      transition: .5s;
     }
 }
 .down-arrow:hover {
     cursor: pointer;
     transform: scale(1.5);
-    transition: .5s;
+
 }

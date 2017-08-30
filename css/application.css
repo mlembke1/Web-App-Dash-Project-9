@@ -422,6 +422,13 @@ div.doughnut-chart-wrapper {
       padding-right: .92em; } }
 
 /*********************************SOCIAL ICON SECTION***************************************/
+@media (min-width: 768px) {
+  .social-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    clear: both; } }
+
 div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   border: 1px solid #69d2e7;
   width: 80%;
@@ -430,8 +437,6 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   border-radius: 5px; }
   @media (min-width: 768px) {
     div.twitter-icon, div.facebook-icon, div.google-plus-icon {
-      width: 25%;
-      display: inline-block;
       margin-right: 1em;
       margin-left: 1em; } }
 
@@ -525,14 +530,39 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   letter-spacing: 3px;
   border-style: none;
   font-size: 1.1em;
-  width: 90%; }
+  width: 90%;
+  border-radius: 5px; }
   @media (min-width: 768px) {
     .message-user-wrapper input[type=text], textarea {
       font-size: 1.2em; } }
 
+.message-user-wrapper input[type=text]:focus {
+  width: 90%; }
+
 textarea {
   margin: auto;
-  text-align: left; }
+  text-align: left;
+  outline: none; }
+
+.send-button {
+  width: 90%;
+  background-color: rgba(167, 219, 216, 0.5);
+  color: grey;
+  border-radius: 4px;
+  border-style: none;
+  height: 3em;
+  transition: .5s ease;
+  font-weight: 200;
+  letter-spacing: 3px;
+  font-family: "Raleway", sans-serif;
+  border: 1px solid #69d2e7;
+  margin-bottom: 2em;
+  outline: none; }
+
+.send-button:hover {
+  background-color: rgba(243, 134, 48, 0.5);
+  transform: scale(1.05);
+  cursor: pointer; }
 
 /*************************************MAIN- HEADER**********************************************/
 header {
@@ -589,7 +619,8 @@ input.top-search[type=text] {
   font-family: "Raleway", sans-serif;
   letter-spacing: 3px;
   border-style: none;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  border-radius: 5px; }
   @media (min-width: 768px) {
     input.top-search[type=text] {
       font-size: 1.2em;
@@ -647,10 +678,8 @@ span#close:hover {
   @media (min-width: 768px) {
     .social-stats h4 {
       text-align: left;
-      margin-top: 21em; } }
-  @media (min-width: 1024px) {
-    .social-stats h4 {
-      margin-top: 26em; } }
+      clear: both;
+      display: block; } }
 
 .new-members-header, .recent-activity-header {
   margin-top: 5em;
@@ -658,11 +687,14 @@ span#close:hover {
 
 .message-user-header {
   padding-left: 1em;
-  text-align: left; }
+  text-align: left;
+  padding-top: 3em; }
 
 .settings-header {
   padding-left: 1em;
-  text-align: left; }
+  text-align: left;
+  clear: both;
+  display: inline-block; }
 
 /****************************************SVGs / IMAGES******************************************/
 #alert-bell {
@@ -709,12 +741,12 @@ img.social-icon {
     .down-arrow {
       width: 15%;
       float: right;
-      padding-right: 1em; } }
+      padding-right: 1em;
+      transition: .5s; } }
 
 .down-arrow:hover {
   cursor: pointer;
-  transform: scale(1.5);
-  transition: .5s; }
+  transform: scale(1.5); }
 
 /***********************************MAIN NAVIGATION ( SIDE - NAV ) *************************/
 .main-nav ul {

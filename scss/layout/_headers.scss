@@ -55,6 +55,7 @@ input.top-search[type=text] {
     letter-spacing: 3px;
     border-style: none;
     font-size: 1.1em;
+    border-radius: 5px;
     @media (min-width: $tablet-breakpoint) {
         font-size: 1.2em;
         float: right;
@@ -125,10 +126,11 @@ h3.secondary-header {
     margin-top: 4em;
   @media (min-width: $tablet-breakpoint) {
     text-align: left;
-    margin-top: 21em;
+    clear: both;
+    display: block;
   }
   @media(min-width: $desktop-breakpoint) {
-    margin-top: 26em;
+    // margin-top: 26em;
   }
 }
 
@@ -141,15 +143,19 @@ h3.secondary-header {
   margin-top: 5em;
   margin-bottom: 2em;
 
+
 }
 
 // ****************************MESSAGE USER / SETTINGS HEADERS***********************
 .message-user-header {
   padding-left: 1em;
   text-align: left;
+  padding-top: 3em;
 }
 
 .settings-header {
     padding-left: 1em;
     text-align: left;
+    clear: both;
+    display: inline-block;
 }

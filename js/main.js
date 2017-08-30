@@ -6,7 +6,6 @@ $('span#close').click(function(){
 
 // *********************************CHARTS! WOO HOO!******************************************
 
-
 // *********************************LINE CHART! ***************************************************
 
 const hours = ['6 a.m.', '8 a.m.', '10 a.m.', '12 p.m.', '2 p.m.', '4 p.m.', '6 p.m.'];
@@ -326,4 +325,36 @@ var lineChart = new Chart(ctx, {
         animateScale: true
       },
     }
+});
+
+//**********************************USER MESSAGE**********************************************
+const userSearch = document.querySelector('.user-search');
+const userMessage = document.querySelector('.user-message');
+//
+// user.addEventListener('keyup', () => {
+//
+// });
+
+//**********************************SEND BUTTON************************************************
+const button  = document.querySelector('.send-button');
+const errorSuccessDiv = document.querySelector('.error-success');
+const div = document.createElement('div');
+const errorMessage = div.innerHTML =
+'Whoops. Make sure everything is filled out above.';
+const successMessage = div.innerHTML =
+'Success! Your message has been sent!';
+
+button.addEventListener('click', () => {
+  if (userSearch.value == '' || userMessage.value == '') {
+        errorSuccessDiv.append(errorMessage);
+        if(errorSuccessDiv.value == errorMessage.value){
+          errorSuccessDiv.remove(successMessage);
+        }
+  }
+  else {
+        errorSuccessDiv.append(successMessage);
+        if(errorSuccessDiv.value == successMessage.value){
+          errorSuccessDiv.remove(errorMessage);
+        }
+  }
 });
