@@ -171,13 +171,18 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
 }
 
 /************************** MESSAGE USER / SETTINGS SECTION**************************/
+#message-user-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: nowrap;
+}
 
 .message-user-wrapper {
   @media (min-width: $tablet-breakpoint){
-      float: left;
       height: 350px;
       text-align: left;
-
+      clear: both;
   }
 }
 
@@ -185,7 +190,7 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   @media (min-width: $tablet-breakpoint) {
       height: 350px;
       text-align: left;
-      // clear: both;
+      clear: both;
   }
 }
 
@@ -199,7 +204,6 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
       font-size: 1.1em;
       width: 90%;
       border-radius: 5px;
-
       @media (min-width: $tablet-breakpoint) {
           font-size: 1.2em;
       }
@@ -235,4 +239,37 @@ textarea {
   background-color: $light-orange-transparent;
   transform: scale(1.05);
   cursor: pointer;
+}
+
+
+.select-menu {
+  background-color: $light-blue-transparent;
+  margin: 6em 0 2em;
+  padding: 1em;
+  text-align: center;
+  font-family: $font-Rale;
+  letter-spacing: 1px;
+  border-style: none;
+}
+
+.save-cancel-button {
+  padding: 1em 3em;
+  margin: 0 1em;
+  color: grey;
+  background-color: $light-orange-transparent;
+  border-style: none;
+  letter-spacing: 2px;
+  transition: .5s;
+  font-weight: $font-Rale;
+  border-radius: 5px;
+}
+
+.save-cancel-button:hover {
+  transform: scale(1.2);
+  background-color: $bright-orange;
+  color: white;
+}
+
+.save-cancel-button:focus {
+  outline:none;
 }

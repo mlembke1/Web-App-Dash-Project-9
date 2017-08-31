@@ -330,31 +330,64 @@ var lineChart = new Chart(ctx, {
 //**********************************USER MESSAGE**********************************************
 const userSearch = document.querySelector('.user-search');
 const userMessage = document.querySelector('.user-message');
-//
-// user.addEventListener('keyup', () => {
-//
-// });
 
-//**********************************SEND BUTTON************************************************
-const button  = document.querySelector('.send-button');
-const errorSuccessDiv = document.querySelector('.error-success');
-const div = document.createElement('div');
-const errorMessage = div.innerHTML =
-'Whoops. Make sure everything is filled out above.';
-const successMessage = div.innerHTML =
-'Success! Your message has been sent!';
+//**********************************USER MESSAGE SEND BUTTON***************************
+const sendButton  = document.querySelector('.send-button');
 
-button.addEventListener('click', () => {
-  if (userSearch.value == '' || userMessage.value == '') {
-        errorSuccessDiv.append(errorMessage);
-        if(errorSuccessDiv.value == errorMessage.value){
-          errorSuccessDiv.remove(successMessage);
-        }
-  }
-  else {
-        errorSuccessDiv.append(successMessage);
-        if(errorSuccessDiv.value == successMessage.value){
-          errorSuccessDiv.remove(errorMessage);
-        }
-  }
+// SWEET ALERT FOR SEND MESSAGE BUTTON
+
+sendButton.addEventListener('click', () => {
+    if (userSearch.value == '' || userMessage.value == '') {
+        swal({
+                    title: "Whoops!",
+                    text: "Make sure everything is filled out first.",
+                    type: "error",
+                    confirmButtonText: "Ok."
+        });
+    }
+    else {
+        swal("Success!", "Your message has been sent.", "success")
+    }
 });
+
+
+// SWEET ALERT FOR SAVE TIME ZONE BUTTON
+const saveButton  = document.getElementById('save-button');
+const selectTimeZone = document.querySelector('.select-menu');
+const noValueOption = document.getElementById('no-value');
+saveButton.addEventListener('click', () => {
+
+  if(selectTimeZone.value !== noValueOption.value) {
+        swal({
+                    title: "Saved",
+                    text: "Good to go!",
+                    type: "success",
+                    confirmButtonText: "Ok"
+        });
+    }
+    else {
+      swal({
+                  title: "Whoops!",
+                  text: "Make sure you choose a time zone.",
+                  type: "error",
+                  confirmButtonText: "Ok."
+      });
+    }
+
+});
+
+//CANCEL TIME ZONE BUTTON
+const cancelButton  = document.getElementById('cancel-button');
+
+cancelButton.addEventListener('click', () => {
+      noValueOption.selected;
+      localStorage.removeItem('time-zone');
+});
+
+
+//LOCAL STORAGE OF SELECTED ITEM
+localStorage.setItem("time-zone", JSON.stringify(selectTimeZone.value));
+
+let selectedTimeZone = JSON.parse(localStorage.getItem('time-zone'));
+
+console.log(selectedTimeZone);

@@ -4,11 +4,12 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width">
       <title>Web App Dashboard</title>
+      <link rel="stylesheet" href="css/sweetalert.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/application.css">
     </head>
     <body>
-<!--------------------- LARGE HEADER AT THE TOP OF THE SCREEN -------------------------->
+<!--******************LARGE HEADER AT THE TOP OF THE SCREEN *******************-->
             <header>
                     <h3 class="primary-header">YourApp<span id ='tm'>&trade;</span></h3>
                     <span id=header-space></span>
@@ -16,7 +17,7 @@
                     who is the user on this account" height= "12%" width= "12%">
                     <span id="avatar-name"> PAUL BUNYAN</span>
             </header
-<!-------------------------- MAIN NAVIGATION / SIDE NAVIGATION ---------------------------------->
+<!--*******************MAIN NAVIGATION  / SIDE NAVIGATION******************************-->
             <nav class="main-nav">
                   <ul id="side-nav">
                               <li class="active">
@@ -46,9 +47,9 @@
                               </li>
                       </ul>
               </nav>
-<!------------------------------------BEGINNING OF MAIN CONTENT----------------------------------->
+<!--******************************BEGINNING OF MAIN CONTENT***************************-->
       <main class="main-content">
-<!-------------------------------------------- ALERT BAR------------------------------------------------------->
+<!--******************************ALERT BAR***************************************************-->
               <span class='alert'>
                   <p> <b><em>Information Alert!</em></b>
                     You have entered Japan's most powerful imaginery app. Tread carfully.
@@ -56,10 +57,10 @@
                    </p>
               </span>
               <h3 class="secondary-header">Dashboard</h3>
-<!-------------------------------------------SEARCH BAR------------------------------------------------------>
+<!--******************************SEARCH BAR*************************************************-->
               <input class="top-search" type="text" name="search" placeholder="Search.."
               align="">
-<!----------------------------------LINE CHART NAVIGATION---------------------------------------------->
+<!--******************************LINE CHART NAVIGATION**********************************-->
               <nav class="line-chart-nav">
                 <ul id="line-chart-nav">
                   <li id="nav-hourly">Hourly</li>
@@ -68,7 +69,7 @@
                   <li id="nav-monthly">Monthly</li>
                 </ul>
               </nav>
-<!----------------------------------------LINE CHARTS-------------------------------------------------------->
+<!--******************************LINE CHARTS*************************************************-->
               <section class="entire-line-chart-wrapper">
                       <div class="hourly-line-chart-wrapper" >
                           <canvas id="hourly-line-chart" height="100" width="270"></canvas>
@@ -86,7 +87,7 @@
                           <canvas id="monthly-line-chart" height="100" width="270"></canvas>
                       </div>
             </section>
-<!----------------------------------BAR CHART AND DOUGHNUT CHART----------------------------->
+<!--******************************BAR CHART AND DOUGHNUT CHART********************-->
               <section class="bar-doughnut-wrapper">
                         <div class="bar-chart-wrapper"  >
                           <h4>Daily Traffic</h4>
@@ -97,7 +98,7 @@
                           <canvas id="doughnut-chart" height="100" width="270"></canvas>
                         </div>
               </section>
-<!----------------------------------SOCIAL MEDIA SECTION---------------------------------------------->
+<!--******************************SOCIAL MEDIA SECTION***********************************-->
               <section class="social-stats">
                     <h4>Social Stats</h4>
                         <div class = "twitter-icon">
@@ -118,7 +119,7 @@
                               <p class="social-stats-numbers">248</p>
                         </div>
               </section>
-<!----------------------------------NEW MEMBERS SECTION--------------------------------------------->
+<!--******************************NEW MEMBERS SECTION******************************-->
               <section class="new-members-wrapper">
                 <h3 class="new-members-header">New Members</h3>
                   <ul>
@@ -157,7 +158,7 @@
                     </li>
                   </ul>
               </section>
-<!----------------------------------RECENT ACTIVITY SECTION----------------------------------------->
+<!--******************************RECENT ACTIVITY SECTION******************************-->
               <section class="recent-activity-wrapper">
                 <h3 class="recent-activity-header">Recent Activity</h3>
                 <ul>
@@ -212,23 +213,81 @@
                   </li>
                 </ul>
               </section>
-<!----------------------------------MESSAGE USER SECTION-------------------------------------------->
-              <section class= "message-user-wrapper">
-                  <h3 class="message-user-header">Message User</h3>
-                  <input class="user-search" type="text" name="user-search" value=""
-                  placeholder="Search for User">
-                  <br>
-                  <textarea class="user-message" placeholder="Message for User"
-                  name="user-message" rows="8" cols="35"></textarea>
-                  <button class= 'send-button' type="button" name="button">SEND</button>
-                  <div class="error-success"></div>
-              </section>
-<!----------------------------------SETTINGS SECTION----------------------------------------------------->
-              <section class="settings-wrapper">
-                  <h3 class="settings-header">Settings</h3>
-
+<!--****************************** MESSAGE USER / SETTING WRAPPER*****************-->
+            <section id="message-settings-wrapper">
+<!--****************************** MESSAGE USER SECTION****************************** -->
+                  <section class= "message-user-wrapper">
+                      <h3 class="message-user-header">Message User</h3>
+                      <input class="user-search" type="text" name="user-search" value=""
+                      placeholder="Search for User">
+                      <br>
+                      <textarea class="user-message" placeholder="Message for User"
+                      name="user-message" rows="8" cols="35"></textarea>
+                      <button class= 'send-button' type="button" name="button">SEND</button>
+                      <!-- <div id="eSc"> -->
+                      <div id="error"></div>
+                      <div id="success"></div>
+                      <!-- </div> -->
+                  </section>
+<!--****************************** SETTINGS SECTION*************************************** -->
+                  <section class="settings-wrapper">
+                            <h3 class="settings-header">Settings</h3>
+                            <p>Send Email Notifications.</p>
+                            <!--****************************** First switch********************************-->
+                            <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch"
+                                    class="onoffswitch-checkbox" id="myonoffswitch1" checked>
+                                    <label class="onoffswitch-label" for="myonoffswitch1">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                            </div>
+                            <p>Set Profile to Public.</p>
+                            <!--************************** Second switch********************************-->
+                            <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch"
+                                    class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+                                    <label class="onoffswitch-label" for="myonoffswitch2">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                            </div>
+                            <!--**************** Choose Your Timezone Section **********************-->
+                            <select class="select-menu">
+                                  <option id = 'no-value' value="" selected hidden disabled>
+                                    Choose Your Timezone
+                                  </option>
+                                	<option
+                                      timeZoneId="1" gmtAdjustment="GMT-12:00"
+                                      useDaylightTime="0" value="-12">(GMT-12:00)
+                                       International Date Line West
+                                 </option>
+                                	<option
+                                      timeZoneId="2" gmtAdjustment="GMT-11:00"
+                                      useDaylightTime="0" value="-11">(GMT-11:00)
+                                      Midway Island, Samoa
+                                  </option>
+                                	<option
+                                    timeZoneId="3" gmtAdjustment="GMT-10:00"
+                                    useDaylightTime="0" value="-10">(GMT-10:00) Hawaii
+                                  </option>
+                                	<option
+                                    timeZoneId="4" gmtAdjustment="GMT-09:00"
+                                    useDaylightTime="1" value="-9">(GMT-09:00) Alaska
+                                  </option>
+                            </select>
+                            <br>
+                            <!--****************************Save/Cancel Buttons************************-->
+                              <button class= 'save-cancel-button' type="button" name="Save"
+                                id = 'save-button'>Save
+                              </button>
+                              <button class= 'save-cancel-button' type="button" name="Cancel"
+                                id = 'cancel-button'>Cancel
+                              </button>
+                  </section>
               </section>
           </main>
+          <script src= "js/sweetalert.min.js"></script>
           <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
