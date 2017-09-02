@@ -171,11 +171,15 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
 }
 
 /************************** MESSAGE USER / SETTINGS SECTION**************************/
-#message-user-wrapper {
+#message-settings-wrapper {
+  @media (min-width: $tablet-breakpoint) {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       flex-wrap: nowrap;
+      height: 500px;
+      width: 90%;
+      }
 }
 
 .message-user-wrapper {
@@ -221,24 +225,27 @@ textarea {
 
 .send-button {
   width: 90%;
-  background-color: $light-blue-transparent;
+  background-color: $light-orange-transparent;
   color: grey;
-  border-radius: 4px;
   border-style: none;
   height: 3em;
   transition: .5s ease;
   font-weight: 200;
   letter-spacing: 3px;
   font-family: $font-Rale;
-  border: 1px solid $bright-blue;
-  margin-bottom: 2em;
+  margin: 3.5em 0 2em;
   outline: none;
+  border-radius: 5px;
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 1.5em;
+  }
 }
 
 .send-button:hover {
-  background-color: $light-orange-transparent;
-  transform: scale(1.05);
+  background-color: $bright-orange;
+  transform: scale(1.1);
   cursor: pointer;
+  color: white
 }
 
 
@@ -250,6 +257,9 @@ textarea {
   font-family: $font-Rale;
   letter-spacing: 1px;
   border-style: none;
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 3em;
+  }
 }
 
 .save-cancel-button {
@@ -260,7 +270,8 @@ textarea {
   border-style: none;
   letter-spacing: 2px;
   transition: .5s;
-  font-weight: $font-Rale;
+  font-family: $font-Rale;
+  font-weight: 200;
   border-radius: 5px;
 }
 

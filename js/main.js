@@ -384,7 +384,6 @@ cancelButton.addEventListener('click', () => {
       localStorage.removeItem('time-zone');
 });
 
-
 //LOCAL STORAGE OF SELECTED ITEM
 localStorage.setItem("time-zone", JSON.stringify(selectTimeZone.value));
 
