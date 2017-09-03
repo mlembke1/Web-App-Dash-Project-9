@@ -28,10 +28,33 @@ h3.primary-header {
         padding-top: 1.5em;
     }
 }
+/*************************************notification-bell**********************************************/
+header a {
+  position: relative;
+  top: 4px;
+  transition: .5s;
+  display: none;
+  @media (min-width: $tablet-breakpoint) {
+    width: 8%;
+    top: 24px;
+    margin-right: -14px;
+    display: inline-block;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    width: 6%;
+    top: 30px;
+  }
+}
+
+header a:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 #avatar-name {
     font-size: .5em;
     letter-spacing: 4px;
-    display: block;
+    display: inline-block;
     margin-bottom: 2em;
     padding-bottom: 1em;
     @media (min-width: $tablet-breakpoint) {
@@ -122,15 +145,20 @@ h3.secondary-header {
 // ********************************SOCIAL STATS HEADER*************************************
 
 
-.social-stats h4 {
+h4.social-stats-header  {
     margin-top: 4em;
   @media (min-width: $tablet-breakpoint) {
-    text-align: left;
+    margin-right: auto;
     clear: both;
-    display: block;
+    display: inline-block;
+    right: 288px;
+    position: relative
   }
   @media(min-width: $desktop-breakpoint) {
-    // margin-top: 26em;
+    right: 160px;
+  }
+  @media (min-width: 1200px) {
+    right: 250px;
   }
 }
 

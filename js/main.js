@@ -380,7 +380,7 @@ saveButton.addEventListener('click', () => {
 const cancelButton  = document.getElementById('cancel-button');
 
 cancelButton.addEventListener('click', () => {
-      noValueOption.selected;
+      noValueOption.selected = true;
       localStorage.removeItem('time-zone');
 });
 

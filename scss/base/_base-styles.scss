@@ -79,10 +79,7 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
     margin-top: 1em;
     border-radius: 5px;
     @media (min-width: $tablet-breakpoint) {
-        // width: 25%;
-        // display: inline-block;
-        margin-right: 1em;
-        margin-left: 1em;
+        margin: 0 1em;
     }
 }
 
@@ -170,12 +167,23 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   }
 }
 
+.time-passed-since-activity {
+  font-size: .5em;
+  display: block;
+  margin-bottom: 1em 0;
+  @media (min-width: $tablet-breakpoint) {
+    display: inline-block;
+    margin-left: 2em;
+    font-size: .7em;
+}
+}
+
 /************************** MESSAGE USER / SETTINGS SECTION**************************/
 #message-settings-wrapper {
   @media (min-width: $tablet-breakpoint) {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-around;
       flex-wrap: nowrap;
       height: 500px;
       width: 90%;

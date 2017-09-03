@@ -86,7 +86,8 @@ a {
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
-  /* 2 */ }
+  /* 2 */
+  text-decoration: none; }
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
@@ -437,8 +438,7 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
   border-radius: 5px; }
   @media (min-width: 768px) {
     div.twitter-icon, div.facebook-icon, div.google-plus-icon {
-      margin-right: 1em;
-      margin-left: 1em; } }
+      margin: 0 1em; } }
 
 /************************ NEW MEMBERS/RECENT ACTIVITY SECTION********************/
 @media (min-width: 768px) {
@@ -510,12 +510,22 @@ div.twitter-icon, div.facebook-icon, div.google-plus-icon {
     font-size: 1em;
     width: 1000px; } }
 
+.time-passed-since-activity {
+  font-size: .5em;
+  display: block;
+  margin-bottom: 1em 0; }
+  @media (min-width: 768px) {
+    .time-passed-since-activity {
+      display: inline-block;
+      margin-left: 2em;
+      font-size: .7em; } }
+
 /************************** MESSAGE USER / SETTINGS SECTION**************************/
 @media (min-width: 768px) {
   #message-settings-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: nowrap;
     height: 500px;
     width: 90%; } }
@@ -638,10 +648,31 @@ h3.primary-header {
     h3.primary-header {
       padding-top: 1.5em; } }
 
+/*************************************notification-bell**********************************************/
+header a {
+  position: relative;
+  top: 4px;
+  transition: .5s;
+  display: none; }
+  @media (min-width: 768px) {
+    header a {
+      width: 8%;
+      top: 24px;
+      margin-right: -14px;
+      display: inline-block; } }
+  @media (min-width: 1024px) {
+    header a {
+      width: 6%;
+      top: 30px; } }
+
+header a:hover {
+  cursor: pointer;
+  transform: scale(1.05); }
+
 #avatar-name {
   font-size: .5em;
   letter-spacing: 4px;
-  display: block;
+  display: inline-block;
   margin-bottom: 2em;
   padding-bottom: 1em; }
   @media (min-width: 768px) {
@@ -718,13 +749,21 @@ span#close:hover {
   cursor: pointer;
   color: grey; }
 
-.social-stats h4 {
+h4.social-stats-header {
   margin-top: 4em; }
   @media (min-width: 768px) {
-    .social-stats h4 {
-      text-align: left;
+    h4.social-stats-header {
+      margin-right: auto;
       clear: both;
-      display: block; } }
+      display: inline-block;
+      right: 288px;
+      position: relative; } }
+  @media (min-width: 1024px) {
+    h4.social-stats-header {
+      right: 160px; } }
+  @media (min-width: 1200px) {
+    h4.social-stats-header {
+      right: 250px; } }
 
 .new-members-header, .recent-activity-header {
   margin-top: 5em;
@@ -746,6 +785,20 @@ span#close:hover {
   padding-bottom: 2%;
   display: block;
   margin: 1em auto; }
+
+#notification-bell {
+  display: inline-block;
+  width: 5%; }
+  @media (min-width: 768px) {
+    #notification-bell {
+      width: 30%; } }
+
+#notification-bell-number {
+  color: white;
+  position: relative;
+  bottom: 18px;
+  right: 10px;
+  width: 50%; }
 
 #avatar {
   border-radius: 50%;

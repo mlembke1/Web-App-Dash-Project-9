@@ -5,6 +5,23 @@
     display: block;
     margin: 1em auto;
 }
+
+#notification-bell {
+  display: inline-block;
+  width: 5%;
+  @media (min-width: $tablet-breakpoint) {
+    width: 30%;
+  }
+}
+
+#notification-bell-number {
+  color: white;
+  position: relative;
+  bottom: 18px;
+  right: 10px;
+  width: 50%;
+}
+
 #avatar {
     border-radius: 50%;
     border: 3px solid #F38630;
@@ -19,6 +36,7 @@
         // width: 50%;
     }
 }
+
 img.social-icon {
     width: 10%;
     padding: 1em;
