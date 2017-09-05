@@ -364,6 +364,15 @@ saveButton.addEventListener('click', () => {
                     type: "success",
                     confirmButtonText: "Ok"
         });
+
+        //LOCAL STORAGE OF SELECTED ITEM
+        localStorage.setItem("time-zone", JSON.stringify(selectTimeZone.value));
+
+        let selectedTimeZone = JSON.parse(localStorage.getItem('time-zone'));
+
+        console.log(selectedTimeZone);
+
+        selectTimeZone.value = selectedTimeZone;
     }
     else {
       swal({
@@ -383,10 +392,3 @@ cancelButton.addEventListener('click', () => {
       noValueOption.selected = true;
       localStorage.removeItem('time-zone');
 });
-
-//LOCAL STORAGE OF SELECTED ITEM
-localStorage.setItem("time-zone", JSON.stringify(selectTimeZone.value));
-
-let selectedTimeZone = JSON.parse(localStorage.getItem('time-zone'));
-
-console.log(selectedTimeZone);
